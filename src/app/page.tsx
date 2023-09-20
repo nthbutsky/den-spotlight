@@ -1,0 +1,333 @@
+import Image, { type ImageProps } from 'next/image'
+import Link from 'next/link'
+import clsx from 'clsx'
+
+import { Button } from '@/components/Button'
+import { Card } from '@/components/Card'
+import { Container } from '@/components/Container'
+import {
+  GitHubIcon,
+  InstagramIcon,
+  LinkedInIcon,
+  TwitterIcon,
+} from '@/components/SocialIcons'
+import logoUbc from '@/images/logos/ubc.svg'
+import logoConvidera from '@/images/logos/convidera.svg'
+import logoFreelance from '@/images/logos/freelance.svg'
+import logoCloudmade from '@/images/logos/cloudmade.svg'
+import logoUsEmbassy from '@/images/logos/us-embassy.svg'
+import logoPolandConsulate from '@/images/logos/poland-consulate.svg'
+import logoVfs from '@/images/logos/vfs.svg'
+import image1 from '@/images/photos/land_01.webp'
+import image2 from '@/images/photos/land_02.webp'
+import image3 from '@/images/photos/land_03.webp'
+import image4 from '@/images/photos/land_04.webp'
+import image5 from '@/images/photos/land_05.webp'
+import { formatDate } from '@/lib/formatDate'
+import portraitImage from '@/images/portrait.jpg'
+
+function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      {...props}
+    >
+      <path
+        d="M2.75 7.75a3 3 0 0 1 3-3h12.5a3 3 0 0 1 3 3v8.5a3 3 0 0 1-3 3H5.75a3 3 0 0 1-3-3v-8.5Z"
+        className="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500"
+      />
+      <path
+        d="m4 6 6.024 5.479a2.915 2.915 0 0 0 3.952 0L20 6"
+        className="stroke-zinc-400 dark:stroke-zinc-500"
+      />
+    </svg>
+  )
+}
+
+function BriefcaseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      {...props}
+    >
+      <path
+        d="M2.75 9.75a3 3 0 0 1 3-3h12.5a3 3 0 0 1 3 3v8.5a3 3 0 0 1-3 3H5.75a3 3 0 0 1-3-3v-8.5Z"
+        className="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500"
+      />
+      <path
+        d="M3 14.25h6.249c.484 0 .952-.002 1.316.319l.777.682a.996.996 0 0 0 1.316 0l.777-.682c.364-.32.832-.319 1.316-.319H21M8.75 6.5V4.75a2 2 0 0 1 2-2h2.5a2 2 0 0 1 2 2V6.5"
+        className="stroke-zinc-400 dark:stroke-zinc-500"
+      />
+    </svg>
+  )
+}
+
+function ArrowDownIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+  return (
+    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" {...props}>
+      <path
+        d="M4.75 8.75 8 12.25m0 0 3.25-3.5M8 12.25v-8.5"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
+
+function SocialLink({
+  icon: Icon,
+  ...props
+}: React.ComponentPropsWithoutRef<typeof Link> & {
+  icon: React.ComponentType<{ className?: string }>
+}) {
+  return (
+    <Link className="group -m-1 p-1" {...props}>
+      <Icon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
+    </Link>
+  )
+}
+
+interface Role {
+  company: string
+  title: string
+  logo: ImageProps['src']
+  start: string | { label: string; dateTime: string }
+  end: string | { label: string; dateTime: string }
+}
+
+function Role({ role }: { role: Role }) {
+  let startLabel =
+    typeof role.start === 'string' ? role.start : role.start.label
+  let startDate =
+    typeof role.start === 'string' ? role.start : role.start.dateTime
+
+  let endLabel = typeof role.end === 'string' ? role.end : role.end.label
+  let endDate = typeof role.end === 'string' ? role.end : role.end.dateTime
+
+  return (
+    <li className="flex gap-4">
+      <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+        <Image src={role.logo} alt="" className="h-7 w-7 rounded-full" unoptimized />
+      </div>
+      <dl className="flex flex-auto flex-wrap gap-x-2">
+        <dt className="sr-only">Company</dt>
+        <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
+          {role.company}
+        </dd>
+        <dt className="sr-only">Role</dt>
+        <dd className="text-xs text-zinc-500 dark:text-zinc-400">
+          {role.title}
+        </dd>
+        <dt className="sr-only">Date</dt>
+        <dd
+          className="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
+          aria-label={`${startLabel} until ${endLabel}`}
+        >
+          <time dateTime={startDate}>{startLabel}</time>{' '}
+          <span aria-hidden="true">—</span>{' '}
+          <time dateTime={endDate}>{endLabel}</time>
+        </dd>
+      </dl>
+    </li>
+  )
+}
+
+function Resume() {
+  let resume: Array<Role> = [
+    {
+      company: 'UBC',
+      title: 'Web Developer',
+      logo: logoUbc,
+      start: '2023',
+      end: {
+        label: 'Present',
+        dateTime: new Date().getFullYear().toString(),
+      },
+    },
+    {
+      company: 'Convidera',
+      title: 'Frontend Developer',
+      logo: logoConvidera,
+      start: '2022',
+      end: {
+        label: 'Present',
+        dateTime: new Date().getFullYear().toString(),
+      },
+    },
+    {
+      company: 'Freelance/Career Break',
+      title: 'Entrepreneur',
+      logo: logoFreelance,
+      start: '2021',
+      end: '2022',
+    },
+    {
+      company: 'CloudMade',
+      title: 'Support Engineer/Fleet Manager',
+      logo: logoCloudmade,
+      start: '2020',
+      end: '2021',
+    },
+    {
+      company: 'The U.S. Embassy',
+      title: 'Consular Assistant/Analyst',
+      logo: logoUsEmbassy,
+      start: '2015',
+      end: '2019',
+    },
+    {
+      company: 'Consulate General of Poland',
+      title: 'Consular Assistant',
+      logo: logoPolandConsulate,
+      start: '2014',
+      end: '2015',
+    },
+    {
+      company: 'VFS Global',
+      title: 'Operations Supervisor',
+      logo: logoVfs,
+      start: '2013',
+      end: '2014',
+    },
+    {
+      company: 'VFS Global',
+      title: 'Manager',
+      logo: logoVfs,
+      start: '2012',
+      end: '2013',
+    },
+  ]
+
+  return (
+    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
+      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+        <BriefcaseIcon className="h-6 w-6 flex-none" />
+        <span className="ml-3">Work</span>
+      </h2>
+      <ol className="mt-6 space-y-4">
+        {resume.map((role, roleIndex) => (
+          <Role key={roleIndex} role={role} />
+        ))}
+      </ol>
+      <Button href="/resume.pdf" download="resume" variant="secondary" className="group mt-6 w-full">
+        Download CV
+        <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
+      </Button>
+    </div>
+  )
+}
+
+function Photos() {
+  let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
+
+  return (
+    <div className="mt-16 sm:mt-20">
+      <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
+        {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
+          <div
+            key={image.src}
+            className={clsx(
+              'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl',
+              rotations[imageIndex % rotations.length],
+            )}
+          >
+            <Image
+              src={image}
+              alt=""
+              sizes="(min-width: 640px) 18rem, 11rem"
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+export default async function Home() {
+
+  return (
+    <>
+      <Container className="mt-9">
+        <div className="max-w-2xl">
+          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+            Tech wizard, photographer, and Swiss army knife.
+          </h1>
+          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+            I’m Denis Butsky, a software engineer and entrepreneur. I live in Vancouver BC, where I design the future.
+          </p>
+          <div className="mt-6 flex gap-6">
+            <SocialLink
+              href="https://github.com"
+              aria-label="Follow on GitHub"
+              icon={GitHubIcon}
+            />
+            <SocialLink
+              href="https://linkedin.com"
+              aria-label="Follow on LinkedIn"
+              icon={LinkedInIcon}
+            />
+            <SocialLink
+              href="mailto:developer@denisbutsky.com"
+              aria-label="Email me"
+              icon={MailIcon}
+            />
+          </div>
+        </div>
+      </Container>
+      <Photos />
+      <Container className="mt-24 md:mt-28">
+        <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
+          <div className="flex flex-col gap-16">
+            <About />
+          </div>
+          <div className="space-y-10 lg:pl-16 xl:pl-24">
+            <div className="max-w-xs px-2.5 lg:max-w-none">
+              <Image
+                src={portraitImage}
+                alt=""
+                sizes="(min-width: 1024px) 32rem, 20rem"
+                className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
+              />
+            </div>
+            <Resume />
+          </div>
+        </div>
+      </Container>
+    </>
+  )
+}
+
+function About() {
+  return (
+    <div className="grid grid-cols-1">
+      <div className="lg:order-first lg:row-span-2">
+        <h2 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+          Crafting Code, Capturing Moments, and Fueling Curiosity.
+        </h2>
+        <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
+          <p>
+            Hey there! I'm a dynamic professional who thrives at the intersection of creativity and technology. My journey is guided by a set of values and skills that define not only my career but also my approach to life.
+          </p>
+          <p>
+            I’ve loved making things for as long as I can remember, especially fixing them. I thrive in the world of tech crafting seamless and efficient web experiences.I pay meticulous attention to detail, ensuring that every pixel and interaction is finely tuned. I am always at the forefront of the latest trends and best practices in the field. I'm fluent in variety of web tech, ensuring a holistic approach to web development. My dev journey began when I transitioned into the IT industry, landing a coveted position at the prestigious German agency. This marked the start of my fulfilling career in web development. Before diving headfirst into coding, I climbed the managerial and analyst ladder in foreign affairs and government sectors, reaching the position of supervisor. This experience made me a well-rounded professional and equipped me with valuable leadership, teamwork and many more soft skills, which I now bring to my programming career pushing the boundaries and delivering outstanding results.
+          </p>
+          <p>
+            Outside of the professional realm, I'm a passionate individual with diverse interests. I have a keen eye for photography and cinematography, often capturing the beauty of the world through my lens. My love for DIY projects, handcrafting, 3D-printing, and automation keeps my creative juices flowing. I'm also a devoted enthusiast of cars, bikes, engines, and electronics – constantly exploring the mechanics that drive our world. My fascination with linguistics and sci-fi fuels my curiosity about the mysteries of language and the limitless possibilities of the future.
+          </p>
+        </div>
+      </div>
+    </div>
+  )
+}

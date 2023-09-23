@@ -1,14 +1,17 @@
-"use client"
-
+import { type Metadata } from 'next'
 import Image from 'next/image'
-import { useState } from 'react';
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 
 import { shuffle } from '@/lib/shuffleArray'
 
-export default function Photography() {
+export const metadata: Metadata = {
+  title: 'Photos',
+  description: 'Things I’ve made trying to put my dent in the universe.',
+}
+
+export default function Photos() {
   const cache: Record<string, any> = {};
 
   function importAll(payload: __WebpackModuleApi.RequireContext) {
@@ -18,16 +21,7 @@ export default function Photography() {
 
   const imageListRaw = [...new Set(Object.entries(cache).map((module) => module[1].default))];
 
-  const imageList = shuffle(imageListRaw);
-  const [expandedIndex, setExpandedIndex] = useState(-1);
-
-  const toggleExpand = (index: number) => {
-    if (expandedIndex === index) {
-      setExpandedIndex(-1);
-    } else {
-      setExpandedIndex(index);
-    }
-  };
+  const imageList = shuffle(imageListRaw)
 
   return (
     <SimpleLayout
@@ -39,25 +33,16 @@ export default function Photography() {
         className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
       >
         {imageList.map((photo, index) => (
-          <Card
-            as="li"
-            key={index}
-            onClick={() => toggleExpand(index)}
-            className={`relative z-10 ${expandedIndex === index ? 'fixed top-0 left-0 w-full h-full bg-white' : ''
-              }`}
-          >
-            <div className={`flex ${expandedIndex === index ? 'items-center justify-center h-screen' : 'items-start'
-              } p-2 ${expandedIndex === index ? 'rounded-none' : 'rounded-xl'
-              }`}>
+          <Card as="li" key={index}>
+            <div className="relative z-10 flex h-full w-full max-h-[500px] min-h-[500px] items-center p-2 justify-center rounded-xl sm:rounded-2xl bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
               <Image
                 src={photo.src}
                 alt=""
-                className={`object-cover ${expandedIndex === index ? 'w-full h-full' : 'max-h-[500px] min-h-[500px]'
-                  } rounded-xl`}
+                className="h-full w-full object-cover rounded-xl"
                 unoptimized
+
                 width={photo.width}
                 height={photo.height}
-                priority={true}
               />
             </div>
             {/* <Card.Description>{photo.caption}</Card.Description> */}

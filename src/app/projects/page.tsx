@@ -3,13 +3,17 @@ import Image from 'next/image'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faLink
+} from "@fortawesome/free-solid-svg-icons";
+
 import logoUbc from '@/images/logos/ubc.svg'
 import logoRemex from '@/images/logos/remex.svg'
 import logoVirtrex from '@/images/logos/virtrex.svg'
 import logoSpeekly from '@/images/logos/speekly.svg'
 import logoAio from '@/images/logos/aio.svg'
-
-import { LinkIcon } from '@/components/Icons'
 
 const projects = [
   {
@@ -79,8 +83,8 @@ export default function Projects() {
               <Card.Link href={project.link.href}>{project.name}</Card.Link>
             </h2>
             <Card.Description>{project.description}</Card.Description>
-            <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-red-500 dark:text-zinc-200">
-              <LinkIcon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
+            <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-red-500 dark:group-hover:text-red-400 dark:text-zinc-200">
+              <FontAwesomeIcon icon={faLink} className="h-6 w-6 text-zinc-500 transition group-hover:text-zinc-600 dark:text-zinc-400 dark:group-hover:text-zinc-300" />
               <span className="ml-2">{project.link.label}</span>
             </p>
           </Card>

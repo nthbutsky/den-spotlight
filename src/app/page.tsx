@@ -5,17 +5,23 @@ import Link from 'next/link'
 import clsx from 'clsx'
 import { useState } from "react";
 
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faPersonDigging,
+  faPlus,
+  faCloudArrowDown,
+  faEnvelopeOpenText
+} from "@fortawesome/free-solid-svg-icons";
+import {
+  faGithub,
+  faLinkedin
+} from "@fortawesome/free-brands-svg-icons";
+
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import ContactForm from '@/components/ContactForm'
-import {
-  GitHubIcon,
-  LinkedInIcon,
-  DownloadIcon,
-  MailIcon,
-  WorkIcon,
-  PlusIcon,
-} from '@/components/Icons'
+
 import logoUbc from '@/images/logos/ubc.svg'
 import logoConvidera from '@/images/logos/convidera.svg'
 import logoFreelance from '@/images/logos/freelance.svg'
@@ -42,11 +48,11 @@ function SocialLink({
   icon: Icon,
   ...props
 }: React.ComponentPropsWithoutRef<typeof Link> & {
-  icon: React.ComponentType<{ className?: string }>
+  icon: IconDefinition
 }) {
   return (
     <Link className="group -m-1 p-1" {...props}>
-      <Icon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
+      <FontAwesomeIcon icon={Icon} className="h-6 w-6 text-zinc-500 transition group-hover:text-zinc-600 dark:text-zinc-400 dark:group-hover:text-zinc-300" />
     </Link>
   )
 }
@@ -213,7 +219,7 @@ function Resume() {
   return (
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
       <h2 className="flex items-center text-xl font-semibold text-zinc-900 dark:text-zinc-100">
-        <WorkIcon className="h-6 w-6 flex-none fill-zinc-500  dark:fill-zinc-400 " />
+        <FontAwesomeIcon icon={faPersonDigging} className="h-6 w-6 flex-none text-zinc-500 dark:text-zinc-400" />
         <span className="ml-3">Work</span>
       </h2>
       <ol className="mt-6 space-y-4">
@@ -224,12 +230,12 @@ function Resume() {
       {!showMoreRoles && (
         <Button variant="secondary" className="group mt-6 w-full" onClick={toggleShowMoreRoles}>
           Show more
-          <PlusIcon className="h-4 w-4 fill-zinc-500 transition group-hover:fill-red-500 dark:fill-zinc-400 dark:group-hover:fill-red-400" />
+          <FontAwesomeIcon icon={faPlus} className="h-4 w-4 text-zinc-500 transition group-hover:text-red-500 dark:text-zinc-400 dark:group-hover:text-red-400" />
         </Button>
       )}
       <Button href="/resume.pdf" download="resume" variant="primary" className="group mt-6 w-full">
         Download CV
-        <DownloadIcon className="h-4 w-4 fill-zinc-500 transition group-hover:fill-red-500 dark:fill-zinc-400 dark:group-hover:fill-red-400" />
+        <FontAwesomeIcon icon={faCloudArrowDown} className="h-4 w-4 text-zinc-500 transition group-hover:text-red-500 dark:text-zinc-400 dark:group-hover:text-red-400" />
       </Button>
     </div>
   )
@@ -251,17 +257,17 @@ export default async function Home() {
             <SocialLink
               href="https://github.com"
               aria-label="Follow on GitHub"
-              icon={GitHubIcon}
+              icon={faGithub}
             />
             <SocialLink
               href="https://linkedin.com"
               aria-label="Follow on LinkedIn"
-              icon={LinkedInIcon}
+              icon={faLinkedin}
             />
             <SocialLink
               href="mailto:developer@denisbutsky.com"
               aria-label="Email me"
-              icon={MailIcon}
+              icon={faEnvelopeOpenText}
             />
           </div>
         </div>

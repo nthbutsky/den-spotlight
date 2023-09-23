@@ -2,11 +2,14 @@
 
 import { useState } from "react";
 import { Button } from '@/components/Button'
-import {
-  ContactIcon,
-  SendIcon
-} from '@/components/Icons'
+
 import { contactFormApi } from "@/api/api";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFileSignature,
+  faPaperPlane
+} from "@fortawesome/free-solid-svg-icons";
 
 const formText = {
   title: "Contact",
@@ -38,7 +41,7 @@ export default function ContactForm() {
       className="flex flex-col rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
     >
       <h2 className="flex items-center text-xl font-semibold text-zinc-900 dark:text-zinc-100">
-        <ContactIcon className="h-6 w-6 flex-none fill-zinc-500  dark:fill-zinc-400 " />
+        <FontAwesomeIcon icon={faFileSignature} className="h-6 w-6 flex-none text-zinc-500  dark:text-zinc-400" />
         <span className="ml-3">{formText.title}</span>
       </h2>
 
@@ -108,8 +111,7 @@ export default function ContactForm() {
       <div className="flex flex-row items-center justify-start">
         <Button type="submit" variant="primary" className={`group mt-6 w-full ${checkFields() ? 'opacity-50' : ''}`} disabled={checkFields()}>
           {formText.submit}
-          <SendIcon className={`h-4 w-4 fill-zinc-500 transition  dark:fill-zinc-400 ${!checkFields() ? 'group-hover:fill-red-500 dark:group-hover:fill-red-400' : ''}`}
-          />
+          <FontAwesomeIcon icon={faPaperPlane} className={`h-4 w-4 text-zinc-500 transition  dark:text-zinc-400 ${!checkFields() ? 'group-hover:text-red-500 dark:group-hover:text-red-400' : ''}`} />
         </Button>
       </div>
     </form>

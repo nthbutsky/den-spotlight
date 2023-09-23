@@ -130,7 +130,7 @@ function About() {
             I’ve loved making things for as long as I can remember, especially fixing them. I thrive in the world of tech crafting seamless and efficient web experiences.I pay meticulous attention to detail, ensuring that every pixel and interaction is finely tuned. I am always at the forefront of the latest trends and best practices in the field. I'm fluent in variety of web tech, ensuring a holistic approach to web development. My dev journey began when I transitioned into the IT industry, landing a coveted position at the prestigious German agency. This marked the start of my fulfilling career in web development. Before diving headfirst into coding, I climbed the managerial and analyst ladder in foreign affairs and government sectors, reaching the position of supervisor. This experience made me a well-rounded professional and equipped me with valuable leadership, teamwork and many more soft skills, which I now bring to my programming career pushing the boundaries and delivering outstanding results.
           </p>
           <p>
-            Outside of the professional realm, I'm a passionate individual with diverse interests. I have a keen eye for photography and cinematography, often capturing the beauty of the world through my lens. My love for DIY projects, handcrafting, 3D-printing, and automation keeps my creative juices flowing. I'm also a devoted enthusiast of cars, bikes, engines, and electronics – constantly exploring the mechanics that drive our world. My fascination with linguistics and sci-fi fuels my curiosity about the mysteries of language and the limitless possibilities of the future.
+            Outside of the professional realm, I'm a passionate individual with diverse interests. I have a keen eye for photography and cinematography, often capturing the beauty of the world through my lens. My love for DIY projects, handcrafting, 3D-printing, and automation keeps my creative juices flowing. I'm also a devoted enthusiast of cars, bikes, engines, and electronics – constantly exploring the mechanics that drives our world. My fascination with linguistics and sci-fi fuels my curiosity about the mysteries of language and the limitless possibilities of the future.
           </p>
         </div>
       </div>
@@ -227,7 +227,7 @@ function Resume() {
           <PlusIcon className="h-4 w-4 fill-zinc-500 transition group-hover:fill-red-500 dark:fill-zinc-400 dark:group-hover:fill-red-400" />
         </Button>
       )}
-      <Button href="/resume.pdf" download="resume" variant="secondary" className="group mt-6 w-full">
+      <Button href="/resume.pdf" download="resume" variant="primary" className="group mt-6 w-full">
         Download CV
         <DownloadIcon className="h-4 w-4 fill-zinc-500 transition group-hover:fill-red-500 dark:fill-zinc-400 dark:group-hover:fill-red-400" />
       </Button>

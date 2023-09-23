@@ -6,35 +6,31 @@ import {
   ContactIcon,
   SendIcon
 } from '@/components/Icons'
+import { contactFormApi } from "@/api/api";
+
+const formText = {
+  title: "Contact",
+  name: "Name",
+  email: "E-mail",
+  subject: "Subject",
+  message: "Message",
+  submit: "Submit",
+}
 
 export default function ContactForm() {
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const formData = new FormData(event.target as HTMLFormElement);
-
-    formData.append("access_key", "20f75c1d-7002-4e69-a177-594073d84a0c");
-
-    const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
-
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json"
-      },
-      body: json
-    });
-    const result = await response.json();
-    if (result.success) {
-      console.log(result);
-    }
+    contactFormApi(event.currentTarget);
   }
 
-  const [fullName, setFullName] = useState("");
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+
+  function checkFields() {
+    return name.trim() === "" || email.trim() === "" || subject.trim() === "" || message.trim() === "";
+  }
 
   return (
     <form
@@ -43,36 +39,33 @@ export default function ContactForm() {
     >
       <h2 className="flex items-center text-xl font-semibold text-zinc-900 dark:text-zinc-100">
         <ContactIcon className="h-6 w-6 flex-none fill-zinc-500  dark:fill-zinc-400 " />
-        <span className="ml-3">Contact</span>
+        <span className="ml-3">{formText.title}</span>
       </h2>
 
       <label
-        htmlFor="fullName"
+        htmlFor="name"
         className="text-sm font-semibold text-gray-500  mt-8 dark:text-gray-50"
       >
-        Name
+        {formText.name}
       </label>
       <input
         type="text"
-        required
-        value={fullName}
+        value={name}
         onChange={(e) => {
-          setFullName(e.target.value);
+          setName(e.target.value);
         }}
-        name="fullName"
+        name="name"
         className="bg-transparent border-b border-zinc-100 py-1 dark:border-zinc-700/40 focus:outline-none focus:border-red-500 dark:focus:border-red-400 text-xs text-zinc-500 dark:text-zinc-400"
       />
-
 
       <label
         htmlFor="email"
         className="text-sm font-semibold text-gray-500 mt-4 dark:text-gray-50"
       >
-        E-mail
+        {formText.email}
       </label>
       <input
         type="email"
-        required
         name="email"
         value={email}
         onChange={(e) => {
@@ -81,16 +74,14 @@ export default function ContactForm() {
         className="bg-transparent border-b border-zinc-100 py-1 dark:border-zinc-700/40 focus:outline-none focus:border-red-500 dark:focus:border-red-400 text-xs text-zinc-500 dark:text-zinc-400"
       />
 
-
       <label
         htmlFor="subject"
         className="text-sm font-semibold text-gray-500 mt-4 dark:text-gray-50"
       >
-        Subject
+        {formText.subject}
       </label>
       <input
         type="text"
-        required
         name="subject"
         value={subject}
         onChange={(e) => {
@@ -103,11 +94,10 @@ export default function ContactForm() {
         htmlFor="message"
         className="text-sm font-semibold text-gray-500 mt-4 dark:text-gray-50"
       >
-        Message
+        {formText.message}
       </label>
       <textarea
         name="message"
-        required
         value={message}
         onChange={(e) => {
           setMessage(e.target.value);
@@ -116,9 +106,10 @@ export default function ContactForm() {
       ></textarea>
 
       <div className="flex flex-row items-center justify-start">
-        <Button type="submit" variant="secondary" className="group mt-6 w-full">
-          Submit
-          <SendIcon className="h-4 w-4 fill-zinc-500 transition group-hover:fill-red-500 dark:fill-zinc-400 dark:group-hover:fill-red-400" />
+        <Button type="submit" variant="primary" className={`group mt-6 w-full ${checkFields() ? 'opacity-50' : ''}`} disabled={checkFields()}>
+          {formText.submit}
+          <SendIcon className={`h-4 w-4 fill-zinc-500 transition  dark:fill-zinc-400 ${!checkFields() ? 'group-hover:fill-red-500 dark:group-hover:fill-red-400' : ''}`}
+          />
         </Button>
       </div>
     </form>

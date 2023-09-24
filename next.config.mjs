@@ -4,11 +4,8 @@ import remarkGfm from 'remark-gfm'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  trailingSlash: true,
-  output: 'export',
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
 }
-module.exports = nextConfig
 
 const withMDX = nextMDX({
   extension: /\.mdx?$/,

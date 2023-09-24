@@ -70,10 +70,10 @@ export default function Tech() {
         </ToolsSection>
         <ToolsSection title="Hardware">
           <Tool title="Laptop">
-            MacBook Pro 14" M1, MacBook Pro 13" Intel, PC Asus ZenBook 14"
+            MacBook Pro 14&#34; M1, MacBook Pro 13&#34; Intel, PC Asus ZenBook 14&#34;
           </Tool>
           <Tool title="Monitor">
-            LG UltraFine 27" 4K
+            LG UltraFine 27&#34; 4K
           </Tool>
           <Tool title="Misc">
             AirPods Pro, Fujifilm Cameras and Lenses, Prusa and Ultimaker 3D Printers

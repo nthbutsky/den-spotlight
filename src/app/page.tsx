@@ -29,12 +29,12 @@ import logoCloudmade from '@/images/logos/cloudmade.svg'
 import logoUsEmbassy from '@/images/logos/us-embassy.svg'
 import logoPolandConsulate from '@/images/logos/poland-consulate.svg'
 import logoVfs from '@/images/logos/vfs.svg'
-import image1 from '@/images/photos/land_01.webp'
-import image2 from '@/images/photos/land_02.webp'
-import image3 from '@/images/photos/land_03.webp'
-import image4 from '@/images/photos/land_04.webp'
-import image5 from '@/images/photos/land_05.webp'
-import portraitImage from '@/images/portrait.jpg'
+import image1 from '@/images/photos/homepage/image1.webp'
+import image2 from '@/images/photos/homepage/image2.webp'
+import image3 from '@/images/photos/homepage/image3.webp'
+import image4 from '@/images/photos/homepage/image4.webp'
+import image5 from '@/images/photos/homepage/image5.webp'
+import portraitImage from '@/images/portrait.webp'
 
 interface Role {
   company: string
@@ -100,7 +100,7 @@ function Photos() {
   return (
     <div className="mt-16 sm:mt-20">
       <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-        {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
+        {[image4, image5, image2, image3, image1].map((image, imageIndex) => (
           <div
             key={image.src}
             className={clsx(
@@ -133,7 +133,7 @@ function About() {
             Hey there! I'm a dynamic professional who thrives at the intersection of creativity and technology. My journey is guided by a set of values and skills that define not only my career but also my approach to life.
           </p>
           <p>
-            I’ve loved making things for as long as I can remember, especially fixing them. I thrive in the world of tech crafting seamless and efficient web experiences.I pay meticulous attention to detail, ensuring that every pixel and interaction is finely tuned. I am always at the forefront of the latest trends and best practices in the field. I'm fluent in variety of web tech, ensuring a holistic approach to web development. My dev journey began when I transitioned into the IT industry, landing a coveted position at the prestigious German agency. This marked the start of my fulfilling career in web development. Before diving headfirst into coding, I climbed the managerial and analyst ladder in foreign affairs and government sectors, reaching the position of supervisor. This experience made me a well-rounded professional and equipped me with valuable leadership, teamwork and many more soft skills, which I now bring to my programming career pushing the boundaries and delivering outstanding results.
+            I’ve loved making things for as long as I can remember, especially fixing them. I thrive in the world of tech crafting seamless and efficient web experiences. I pay meticulous attention to detail, ensuring that every pixel and interaction is finely tuned. I am always at the forefront of the latest trends and best practices in the field. I'm fluent in variety of web tech, ensuring a holistic approach to web development. My dev journey began when I transitioned into the IT industry, landing a coveted position at the prestigious German agency. This marked the start of my fulfilling career in web development. Before diving headfirst into coding, I climbed the managerial and analyst ladder in foreign affairs and government sectors, reaching the position of supervisor. This experience made me a well-rounded professional and equipped me with valuable leadership, teamwork and many more soft skills, which I now bring to my programming career pushing the boundaries and delivering outstanding results.
           </p>
           <p>
             Outside of the professional realm, I'm a passionate individual with diverse interests. I have a keen eye for photography and cinematography, often capturing the beauty of the world through my lens. My love for DIY projects, handcrafting, 3D-printing, and automation keeps my creative juices flowing. I'm also a devoted enthusiast of cars, bikes, engines, and electronics – constantly exploring the mechanics that drives our world. My fascination with linguistics and sci-fi fuels my curiosity about the mysteries of language and the limitless possibilities of the future.
@@ -233,15 +233,15 @@ function Resume() {
           <FontAwesomeIcon icon={faPlus} className="h-4 w-4 text-zinc-500 transition group-hover:text-red-500 dark:text-zinc-400 dark:group-hover:text-red-400" />
         </Button>
       )}
-      <Button href="/resume.pdf" download="resume" variant="primary" className="group mt-6 w-full">
-        Download CV
+      <Button href="/Resume-Denis-Butsky.pdf" download="resume" variant="primary" className="group mt-6 w-full">
+        Download Résumé
         <FontAwesomeIcon icon={faCloudArrowDown} className="h-4 w-4 text-zinc-500 transition group-hover:text-red-500 dark:text-zinc-400 dark:group-hover:text-red-400" />
       </Button>
     </div>
   )
 }
 
-export default async function Home() {
+export default function Home() {
 
   return (
     <>
@@ -279,8 +279,9 @@ export default async function Home() {
             <About />
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
-            <div className="max-w-xs px-2.5 lg:max-w-none">
+            <div className="px-2.5 lg:max-w-none">
               <Image
+                priority
                 src={portraitImage}
                 alt=""
                 sizes="(min-width: 1024px) 32rem, 20rem"

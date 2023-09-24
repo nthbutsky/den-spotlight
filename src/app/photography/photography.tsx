@@ -17,7 +17,7 @@ export default function Photos() {
   function importAll(payload: __WebpackModuleApi.RequireContext) {
     payload.keys().forEach((key) => (cache[key] = payload(key)));
   }
-  importAll(require.context("@/images/photos", false, /\.(png|jpe?g|svg|webp)$/));
+  importAll(require.context("@/images/photos/photography", false, /\.(png|jpe?g|svg|webp)$/));
 
   const imageListRaw = [...new Set(Object.entries(cache).map((module) => module[1].default))];
 
@@ -40,7 +40,6 @@ export default function Photos() {
                 alt=""
                 className="h-full w-full object-cover rounded-xl"
                 unoptimized
-
                 width={photo.width}
                 height={photo.height}
               />

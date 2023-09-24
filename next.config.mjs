@@ -8,6 +8,7 @@ const nextConfig = {
   output: 'export',
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
 }
+module.exports = nextConfig
 
 const withMDX = nextMDX({
   extension: /\.mdx?$/,

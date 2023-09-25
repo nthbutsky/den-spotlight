@@ -19,4 +19,5 @@ export const contactFormApi = async (payload: HTMLFormElement) => {
   if (result.success) {
     console.log(result);
   }
+  return result;
 }

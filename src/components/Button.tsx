@@ -11,13 +11,17 @@ const variantStyles = {
 type ButtonProps = {
   variant?: keyof typeof variantStyles;
   disabled?: boolean;
+  submitted?: boolean;
+  error?: boolean;
 } & (
     | (React.ComponentPropsWithoutRef<'button'> & { href?: undefined })
     | React.ComponentPropsWithoutRef<typeof Link>
   );
 
-export function Button({ variant = 'primary', className, disabled, ...props }: ButtonProps) {
+export function Button({ variant = 'primary', className, disabled, submitted, error, ...props }: ButtonProps) {
+  const isSubmitted = submitted || false;
   const isDisabled = disabled || false;
+  const isError = error || false;
   const isAnchor = typeof props.href !== 'undefined';
 
   className = clsx(
@@ -25,7 +29,9 @@ export function Button({ variant = 'primary', className, disabled, ...props }: B
     variantStyles[variant],
     className,
     {
+      'bg-emerald-600 dark:bg-emerald-800': isSubmitted,
       'cursor-not-allowed': isDisabled,
+      'bg-red-500 dark:bg-red-400': isError,
       'hover:bg-zinc-700 active:bg-zinc-800 active:text-zinc-100/70 dark:hover:bg-zinc-600 dark:active:bg-zinc-700 dark:active:text-zinc-100/70': !isDisabled && variantStyles['primary'],
       'hover:bg-zinc-100 active:bg-zinc-100 active:text-zinc-900/60 dark:hover:bg-zinc-800 dark:hover:text-red-400 hover:text-red-500 dark:active:bg-zinc-800/50 dark:active:text-zinc-50/70': !isDisabled && variantStyles['secondary'],
     }

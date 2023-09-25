@@ -18,18 +18,41 @@ const formText = {
   subject: "Subject",
   message: "Message",
   submit: "Submit",
+  button: {
+    submitted: "Sent",
+    error: "Error happened, try again!",
+  }
 }
 
 export default function ContactForm() {
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    contactFormApi(event.currentTarget);
+    try {
+      const response = await contactFormApi(event.currentTarget);
+      if (response.success) {
+        setFormSubmitted(true);
+        resetForm();
+      } else {
+        setFormError(true);
+      }
+    } catch (error) {
+      setFormError(true);
+    }
   }
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [formError, setFormError] = useState(false);
+
+  function resetForm() {
+    setName("");
+    setEmail("");
+    setSubject("");
+    setMessage("");
+  }
 
   function checkFields() {
     return name.trim() === "" || email.trim() === "" || subject.trim() === "" || message.trim() === "";
@@ -109,9 +132,12 @@ export default function ContactForm() {
       ></textarea>
 
       <div className="flex flex-row items-center justify-start">
-        <Button type="submit" variant="primary" className={`group mt-6 w-full ${checkFields() ? 'opacity-50' : ''}`} disabled={checkFields()}>
-          {formText.submit}
-          <FontAwesomeIcon icon={faPaperPlane} className={`h-4 w-4 text-zinc-500 transition  dark:text-zinc-400 ${!checkFields() ? 'group-hover:text-red-500 dark:group-hover:text-red-400' : ''}`} />
+        <Button type="submit" variant="primary" className={`group mt-6 w-full ${checkFields() ? 'opacity-50' : ''}`} disabled={checkFields() || formSubmitted} submitted={formSubmitted} error={formError}>
+          {formError ? formText.button.error : formSubmitted ? formText.button.submitted : formText.submit}
+          <FontAwesomeIcon icon={faPaperPlane} className={`h-4 w-4 text-zinc-500 transition  dark:text-zinc-400 ${!checkFields() && !formSubmitted
+            ? "group-hover:text-red-500 dark:group-hover:text-red-400"
+            : ""
+            }`} />
         </Button>
       </div>
     </form>

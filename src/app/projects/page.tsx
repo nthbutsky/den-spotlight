@@ -19,36 +19,42 @@ const projects = [
   {
     name: 'MBIM',
     description: 'Main website for Microbiology & Immunology Department of University of British Columbia.',
+    stack: 'Drupal, SCSS, JavaScript, PHP, MySQL, Docker',
     link: { href: '#', label: 'Dev Stage' },
     logo: logoUbc,
   },
   {
     name: 'AIO Platform',
     description: 'Comprehensive software solution designed for managing intelligent objects, their associated metadata, locations, and targeted URLs.',
+    stack: 'Vue, TypeScript, Vite, Tailwind, GO, GraphQL, Laravel, Docker, Kubernetes, PHP, Plesk, Auth0',
     link: { href: '#', label: 'Dev Stage' },
     logo: logoAio,
   },
   {
     name: 'AIO Landing Page',
     description: 'Fancy landing page for marketing team to promote AIO Platform.',
+    stack: 'Vue, Vite, Laravel, Statamic, Tailwind, TypeScript, Docker, Hubspot',
     link: { href: 'https://landing.connect-one.devcon.team/', label: 'Pre Prod' },
     logo: logoAio,
   },
   {
     name: 'Speekly',
     description: 'Platform for user generated content videos.',
+    stack: 'Laravel, Alpine, Tailwind, Docker, Kubernetes, PHP, Stripe, Livewire, Statamic, Hubspot',
     link: { href: 'https://speekly.de/', label: 'speekly.de' },
     logo: logoSpeekly,
   },
   {
     name: 'Virtrex',
     description: 'B2B platform for shortening sales cycle.',
+    stack: 'Vue, Laravel, SASS, TypeScript, Vite, PHP, Docker',
     link: { href: 'https://www.virtrex.de/', label: 'virtrex.de' },
     logo: logoVirtrex,
   },
   {
     name: 'REMEX',
-    description: 'A portal for the expert in mineral disposal, including recycling, utilization or disposal of mineral waste..',
+    description: 'A portal for the expert in mineral disposal, including recycling, utilization or disposal of mineral waste.',
+    stack: 'Vue, Nuxt, TypeScript, Webpack, SASS, Tailwind, PHP, Docker',
     link: { href: 'https://www.remex.de/', label: 'remex.de' },
     logo: logoRemex,
   },
@@ -83,6 +89,7 @@ export default function Projects() {
               <Card.Link href={project.link.href}>{project.name}</Card.Link>
             </h2>
             <Card.Description>{project.description}</Card.Description>
+            <Card.Stack>{project.stack}</Card.Stack>
             <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-red-500 dark:group-hover:text-red-400 dark:text-zinc-200">
               <FontAwesomeIcon icon={faLink} className="h-6 w-6 text-zinc-500 transition group-hover:text-zinc-600 dark:text-zinc-400 dark:group-hover:text-zinc-300" />
               <span className="ml-2">{project.link.label}</span>

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: {
     template: '%s - Denis Butsky',
     default:
-      'Denis Butsky - Tech wizard, photographer, and Swiss army knife.',
+      'Denis Butsky - Tech wizard, photographer, and Swiss Army knife.',
   },
   description:
     'I’m Denis Butsky, a software engineer and entrepreneur. I live in Vancouver BC, where I design the future.',

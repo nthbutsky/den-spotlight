@@ -3,20 +3,17 @@
 import Image, { type ImageProps } from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
-import { useState } from "react";
+import { useState } from 'react'
 
-import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faPersonDigging,
   faPlus,
   faCloudArrowDown,
-  faEnvelopeOpenText
-} from "@fortawesome/free-solid-svg-icons";
-import {
-  faGithub,
-  faLinkedin
-} from "@fortawesome/free-brands-svg-icons";
+  faEnvelopeOpenText,
+} from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
@@ -52,7 +49,10 @@ function SocialLink({
 }) {
   return (
     <Link className="group -m-1 p-1" {...props}>
-      <FontAwesomeIcon icon={Icon} className="h-6 w-6 text-zinc-500 transition group-hover:text-zinc-600 dark:text-zinc-400 dark:group-hover:text-zinc-300" />
+      <FontAwesomeIcon
+        icon={Icon}
+        className="h-6 w-6 text-zinc-500 transition group-hover:text-zinc-600 dark:text-zinc-400 dark:group-hover:text-zinc-300"
+      />
     </Link>
   )
 }
@@ -69,7 +69,12 @@ function Role({ role }: { role: Role }) {
   return (
     <li className="flex gap-4">
       <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-        <Image src={role.logo} alt="" className="h-7 w-7 rounded-full" unoptimized />
+        <Image
+          src={role.logo}
+          alt=""
+          className="h-7 w-7 rounded-full"
+          unoptimized
+        />
       </div>
       <dl className="flex flex-auto flex-wrap gap-x-2">
         <dt className="sr-only">Company</dt>
@@ -130,13 +135,39 @@ function About() {
         </h2>
         <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
           <p>
-            Hey there! I am a dynamic professional who thrives at the intersection of creativity and technology. My journey is guided by a set of values and skills that define not only my career but also my approach to life.
+            Hey there! I am a dynamic professional who thrives at the
+            intersection of creativity and technology. My journey is guided by a
+            set of values and skills that define not only my career but also my
+            approach to life.
           </p>
           <p>
-            I have loved making things for as long as I can remember, especially fixing them. I thrive in the world of tech crafting seamless and efficient web experiences. I pay meticulous attention to detail, ensuring that every pixel and interaction is finely tuned. I am always at the forefront of the latest trends and best practices in the field. I am fluent in variety of web tech, ensuring a holistic approach to web development. My dev journey began when I transitioned into the IT industry, landing a coveted position at the prestigious German agency. This marked the start of my fulfilling career in web development. Before diving headfirst into coding, I climbed the managerial and analyst ladder in foreign affairs and government sectors, reaching the position of supervisor. This experience made me a well-rounded professional and equipped me with valuable leadership, teamwork and many more soft skills, which I now bring to my programming career pushing the boundaries and delivering outstanding results.
+            I have loved making things for as long as I can remember, especially
+            fixing them. I thrive in the world of tech crafting seamless and
+            efficient web experiences. I pay meticulous attention to detail,
+            ensuring that every pixel and interaction is finely tuned. I am
+            always at the forefront of the latest trends and best practices in
+            the field. I am fluent in variety of web tech, ensuring a holistic
+            approach to web development. My dev journey began when I
+            transitioned into the IT industry, landing a coveted position at the
+            prestigious German agency. This marked the start of my fulfilling
+            career in web development. Before diving headfirst into coding, I
+            climbed the managerial and analyst ladder in foreign affairs and
+            government sectors, reaching the position of supervisor. This
+            experience made me a well-rounded professional and equipped me with
+            valuable leadership, teamwork and many more soft skills, which I now
+            bring to my programming career pushing the boundaries and delivering
+            outstanding results.
           </p>
           <p>
-            Outside of the professional realm, I am a passionate individual with diverse interests. I have a keen eye for photography and cinematography, often capturing the beauty of the world through my lens. My love for DIY projects, handcrafting, 3D-printing, and automation keeps my creative juices flowing. I am also a devoted enthusiast of cars, bikes, engines, and electronics – constantly exploring the mechanics that drives our world. My fascination with linguistics and sci-fi fuels my curiosity about the mysteries of language and the limitless possibilities of the future.
+            Outside of the professional realm, I am a passionate individual with
+            diverse interests. I have a keen eye for photography and
+            cinematography, often capturing the beauty of the world through my
+            lens. My love for DIY projects, handcrafting, 3D-printing, and
+            automation keeps my creative juices flowing. I am also a devoted
+            enthusiast of cars, bikes, engines, and electronics – constantly
+            exploring the mechanics that drives our world. My fascination with
+            linguistics and sci-fi fuels my curiosity about the mysteries of
+            language and the limitless possibilities of the future.
           </p>
         </div>
       </div>
@@ -210,39 +241,59 @@ function Resume() {
     },
   ]
 
-  const [showMoreRoles, setShowMoreRoles] = useState(false);
+  const [showMoreRoles, setShowMoreRoles] = useState(false)
 
   const toggleShowMoreRoles = () => {
-    setShowMoreRoles(!showMoreRoles);
-  };
+    setShowMoreRoles(!showMoreRoles)
+  }
 
   return (
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
       <h2 className="flex items-center text-xl font-semibold text-zinc-900 dark:text-zinc-100">
-        <FontAwesomeIcon icon={faPersonDigging} className="h-6 w-6 flex-none text-zinc-500 dark:text-zinc-400" />
+        <FontAwesomeIcon
+          icon={faPersonDigging}
+          className="h-6 w-6 flex-none text-zinc-500 dark:text-zinc-400"
+        />
         <span className="ml-3">Work</span>
       </h2>
       <ol className="mt-6 space-y-4">
-        {resume.map((role, roleIndex) => (
-          (showMoreRoles || roleIndex < 4) && <Role key={roleIndex} role={role} />
-        ))}
+        {resume.map(
+          (role, roleIndex) =>
+            (showMoreRoles || roleIndex < 4) && (
+              <Role key={roleIndex} role={role} />
+            ),
+        )}
       </ol>
       {!showMoreRoles && (
-        <Button variant="secondary" className="group mt-6 w-full" onClick={toggleShowMoreRoles}>
+        <Button
+          variant="secondary"
+          className="group mt-6 w-full"
+          onClick={toggleShowMoreRoles}
+        >
           Show more
-          <FontAwesomeIcon icon={faPlus} className="h-4 w-4 text-zinc-500 transition group-hover:text-red-500 dark:text-zinc-400 dark:group-hover:text-red-400" />
+          <FontAwesomeIcon
+            icon={faPlus}
+            className="h-4 w-4 text-zinc-500 transition group-hover:text-red-500 dark:text-zinc-400 dark:group-hover:text-red-400"
+          />
         </Button>
       )}
-      <Button href="/Resume-Denis-Butsky.pdf" download="resume" variant="primary" className="group mt-6 w-full">
+      <Button
+        href="/Resume-Denis-Butsky.pdf"
+        download="resume"
+        variant="primary"
+        className="group mt-6 w-full"
+      >
         Download Résumé
-        <FontAwesomeIcon icon={faCloudArrowDown} className="h-4 w-4 text-zinc-500 transition group-hover:text-red-500 dark:text-zinc-400 dark:group-hover:text-red-400" />
+        <FontAwesomeIcon
+          icon={faCloudArrowDown}
+          className="h-4 w-4 text-zinc-500 transition group-hover:text-red-500 dark:text-zinc-400 dark:group-hover:text-red-400"
+        />
       </Button>
     </div>
   )
 }
 
 export default function Home() {
-
   return (
     <>
       <Container className="mt-9">
@@ -251,7 +302,8 @@ export default function Home() {
             Tech wizard, photographer, and Swiss Army knife.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Denis Butsky, a software engineer and entrepreneur. I live in Vancouver BC, where I design the future.
+            I’m Denis Butsky, a software engineer and entrepreneur. I live in
+            Vancouver BC, where I design the future.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink

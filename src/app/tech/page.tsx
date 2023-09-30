@@ -36,7 +36,8 @@ function Tool({
 
 export const metadata = {
   title: 'Tech',
-  description: 'Technologies I passion about, software and hardware I use, gadgets I love.',
+  description:
+    'Technologies I passion about, software and hardware I use, gadgets I love.',
 }
 
 export default function Tech() {
@@ -48,35 +49,31 @@ export default function Tech() {
       <div className="space-y-8">
         <ToolsSection title="Stack">
           <Tool title="Web">
-            Vue, Nuxt, JavaScript, TypeScript, Tailwind, Firebase, GraphQL, Docker
+            Vue, Nuxt, JavaScript, TypeScript, Tailwind, Firebase, GraphQL,
+            Docker
           </Tool>
-          <Tool title="OS">
-            MacOS, Linux, Windows, Android, Raspberry Pi
-          </Tool>
+          <Tool title="OS">MacOS, Linux, Windows, Android, Raspberry Pi</Tool>
         </ToolsSection>
         <ToolsSection title="Software">
           <Tool title="IDE">
-            Visual Studio Code, WebStorm, PhpStorm, Android Studio, Xcode, Arduino IDE
+            Visual Studio Code, WebStorm, PhpStorm, Android Studio, Xcode,
+            Arduino IDE
           </Tool>
-          <Tool title="Terminal">
-            Warp, Hyper
-          </Tool>
-          <Tool title="Productivity">
-            Notion, Alfred, ChatGPT
-          </Tool>
+          <Tool title="Terminal">Warp, Hyper</Tool>
+          <Tool title="Productivity">Notion, Alfred, ChatGPT</Tool>
           <Tool title="Misc">
             CyberDuck, TablePlus, DBeaver, Adobe, Figma, Notion
           </Tool>
         </ToolsSection>
         <ToolsSection title="Hardware">
           <Tool title="Laptop">
-            MacBook Pro 14&#34; M1, MacBook Pro 13&#34; Intel, PC Asus ZenBook 14&#34;
+            MacBook Pro 14&#34; M1, MacBook Pro 13&#34; Intel, PC Asus ZenBook
+            14&#34;
           </Tool>
-          <Tool title="Monitor">
-            LG UltraFine 27&#34; 4K
-          </Tool>
+          <Tool title="Monitor">LG UltraFine 27&#34; 4K</Tool>
           <Tool title="Misc">
-            AirPods Pro, Fujifilm Cameras and Lenses, Prusa and Ultimaker 3D Printers
+            AirPods Pro, Fujifilm Cameras and Lenses, Prusa and Ultimaker 3D
+            Printers
           </Tool>
         </ToolsSection>
       </div>

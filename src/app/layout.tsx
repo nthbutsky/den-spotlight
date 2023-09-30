@@ -3,17 +3,16 @@ import { type Metadata } from 'next'
 import { Providers } from '@/app/providers'
 import { Layout } from '@/components/Layout'
 
-import "@fortawesome/fontawesome-svg-core/styles.css";
-import { config } from "@fortawesome/fontawesome-svg-core";
-config.autoAddCss = false;
+import '@fortawesome/fontawesome-svg-core/styles.css'
+import { config } from '@fortawesome/fontawesome-svg-core'
+config.autoAddCss = false
 
 import '@/styles/tailwind.css'
 
 export const metadata: Metadata = {
   title: {
     template: '%s - Denis Butsky',
-    default:
-      'Denis Butsky - Tech wizard, photographer, and Swiss Army knife.',
+    default: 'Denis Butsky - Tech wizard, photographer, and Swiss Army knife.',
   },
   description:
     'I’m Denis Butsky, a software engineer and entrepreneur. I live in Vancouver BC, where I design the future.',

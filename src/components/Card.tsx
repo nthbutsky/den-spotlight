@@ -77,11 +77,7 @@ Card.Description = function CardDescription({
   )
 }
 
-Card.Stack = function CardStack({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+Card.Stack = function CardStack({ children }: { children: React.ReactNode }) {
   return (
     <p className="relative z-10 mt-2 text-sm font-bold text-zinc-600 dark:text-zinc-400">
       {children}

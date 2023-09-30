@@ -12,14 +12,22 @@ export const metadata: Metadata = {
 }
 
 export default function Photos() {
-  const cache: Record<string, any> = {};
+  const cache: Record<string, any> = {}
 
   function importAll(payload: __WebpackModuleApi.RequireContext) {
-    payload.keys().forEach((key) => (cache[key] = payload(key)));
+    payload.keys().forEach((key) => (cache[key] = payload(key)))
   }
-  importAll(require.context("@/images/photos/photography", false, /\.(png|jpe?g|svg|webp)$/));
+  importAll(
+    require.context(
+      '@/images/photos/photography',
+      false,
+      /\.(png|jpe?g|svg|webp)$/,
+    ),
+  )
 
-  const imageListRaw = [...new Set(Object.entries(cache).map((module) => module[1].default))];
+  const imageListRaw = [
+    ...new Set(Object.entries(cache).map((module) => module[1].default)),
+  ]
 
   const imageList = shuffle(imageListRaw)
 
@@ -34,11 +42,11 @@ export default function Photos() {
       >
         {imageList.map((photo, index) => (
           <Card as="li" key={index}>
-            <div className="relative z-10 flex h-full w-full max-h-[500px] min-h-[500px] items-center p-2 justify-center rounded-xl sm:rounded-2xl bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+            <div className="relative z-10 flex h-full max-h-[500px] min-h-[500px] w-full items-center justify-center rounded-xl bg-white p-2 shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0 sm:rounded-2xl">
               <Image
                 src={photo.src}
                 alt=""
-                className="h-full w-full object-cover rounded-xl"
+                className="h-full w-full rounded-xl object-cover"
                 unoptimized
                 width={photo.width}
                 height={photo.height}

@@ -1,61 +1,66 @@
-"use client"
+'use client'
 
-import { useState } from "react";
+import { useState } from 'react'
 import { Button } from '@/components/Button'
 
-import { contactFormApi } from "@/api/api";
+import { contactFormApi } from '@/api/api'
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faFileSignature,
-  faPaperPlane
-} from "@fortawesome/free-solid-svg-icons";
+  faPaperPlane,
+} from '@fortawesome/free-solid-svg-icons'
 
 const formText = {
-  title: "Contact",
-  name: "Name",
-  email: "E-mail",
-  subject: "Subject",
-  message: "Message",
-  submit: "Submit",
+  title: 'Contact',
+  name: 'Name',
+  email: 'E-mail',
+  subject: 'Subject',
+  message: 'Message',
+  submit: 'Submit',
   button: {
-    submitted: "Sent",
-    error: "Error happened, try again!",
-  }
+    submitted: 'Sent',
+    error: 'Error happened, try again!',
+  },
 }
 
 export default function ContactForm() {
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
+    event.preventDefault()
     try {
-      const response = await contactFormApi(event.currentTarget);
+      const response = await contactFormApi(event.currentTarget)
       if (response.success) {
-        setFormSubmitted(true);
-        resetForm();
+        setFormSubmitted(true)
+        resetForm()
       } else {
-        setFormError(true);
+        setFormError(true)
       }
     } catch (error) {
-      setFormError(true);
+      setFormError(true)
     }
   }
 
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
-  const [formSubmitted, setFormSubmitted] = useState(false);
-  const [formError, setFormError] = useState(false);
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [subject, setSubject] = useState('')
+  const [message, setMessage] = useState('')
+  const [formSubmitted, setFormSubmitted] = useState(false)
+  const [formError, setFormError] = useState(false)
 
   function resetForm() {
-    setName("");
-    setEmail("");
-    setSubject("");
-    setMessage("");
+    setName('')
+    setEmail('')
+    setSubject('')
+    setMessage('')
   }
 
   function checkFields() {
-    return name.trim() === "" || email.trim() === "" || subject.trim() === "" || message.trim() === "";
+    return (
+      name.trim() === '' ||
+      email.trim() === '' ||
+      subject.trim() === '' ||
+      message.trim() === ''
+    )
   }
 
   return (
@@ -64,13 +69,16 @@ export default function ContactForm() {
       className="flex flex-col rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
     >
       <h2 className="flex items-center text-xl font-semibold text-zinc-900 dark:text-zinc-100">
-        <FontAwesomeIcon icon={faFileSignature} className="h-6 w-6 flex-none text-zinc-500  dark:text-zinc-400" />
+        <FontAwesomeIcon
+          icon={faFileSignature}
+          className="h-6 w-6 flex-none text-zinc-500  dark:text-zinc-400"
+        />
         <span className="ml-3">{formText.title}</span>
       </h2>
 
       <label
         htmlFor="name"
-        className="text-sm font-semibold text-gray-500  mt-8 dark:text-gray-50"
+        className="mt-8 text-sm font-semibold  text-gray-500 dark:text-gray-50"
       >
         {formText.name}
       </label>
@@ -78,15 +86,15 @@ export default function ContactForm() {
         type="text"
         value={name}
         onChange={(e) => {
-          setName(e.target.value);
+          setName(e.target.value)
         }}
         name="name"
-        className="bg-transparent border-b border-zinc-100 py-1 dark:border-zinc-700/40 focus:outline-none focus:border-red-500 dark:focus:border-red-400 text-xs text-zinc-500 dark:text-zinc-400"
+        className="border-b border-zinc-100 bg-transparent py-1 text-xs text-zinc-500 focus:border-red-500 focus:outline-none dark:border-zinc-700/40 dark:text-zinc-400 dark:focus:border-red-400"
       />
 
       <label
         htmlFor="email"
-        className="text-sm font-semibold text-gray-500 mt-4 dark:text-gray-50"
+        className="mt-4 text-sm font-semibold text-gray-500 dark:text-gray-50"
       >
         {formText.email}
       </label>
@@ -95,14 +103,14 @@ export default function ContactForm() {
         name="email"
         value={email}
         onChange={(e) => {
-          setEmail(e.target.value);
+          setEmail(e.target.value)
         }}
-        className="bg-transparent border-b border-zinc-100 py-1 dark:border-zinc-700/40 focus:outline-none focus:border-red-500 dark:focus:border-red-400 text-xs text-zinc-500 dark:text-zinc-400"
+        className="border-b border-zinc-100 bg-transparent py-1 text-xs text-zinc-500 focus:border-red-500 focus:outline-none dark:border-zinc-700/40 dark:text-zinc-400 dark:focus:border-red-400"
       />
 
       <label
         htmlFor="subject"
-        className="text-sm font-semibold text-gray-500 mt-4 dark:text-gray-50"
+        className="mt-4 text-sm font-semibold text-gray-500 dark:text-gray-50"
       >
         {formText.subject}
       </label>
@@ -111,14 +119,14 @@ export default function ContactForm() {
         name="subject"
         value={subject}
         onChange={(e) => {
-          setSubject(e.target.value);
+          setSubject(e.target.value)
         }}
-        className="bg-transparent border-b border-zinc-100 py-1 dark:border-zinc-700/40 focus:outline-none focus:border-red-500 dark:focus:border-red-400 text-xs text-zinc-500 dark:text-zinc-400"
+        className="border-b border-zinc-100 bg-transparent py-1 text-xs text-zinc-500 focus:border-red-500 focus:outline-none dark:border-zinc-700/40 dark:text-zinc-400 dark:focus:border-red-400"
       />
 
       <label
         htmlFor="message"
-        className="text-sm font-semibold text-gray-500 mt-4 dark:text-gray-50"
+        className="mt-4 text-sm font-semibold text-gray-500 dark:text-gray-50"
       >
         {formText.message}
       </label>
@@ -126,18 +134,33 @@ export default function ContactForm() {
         name="message"
         value={message}
         onChange={(e) => {
-          setMessage(e.target.value);
+          setMessage(e.target.value)
         }}
-        className="bg-transparent border-b border-zinc-100 py-1 dark:border-zinc-700/40 focus:outline-none focus:border-red-500 dark:focus:border-red-400 text-xs text-zinc-500 dark:text-zinc-400"
+        className="border-b border-zinc-100 bg-transparent py-1 text-xs text-zinc-500 focus:border-red-500 focus:outline-none dark:border-zinc-700/40 dark:text-zinc-400 dark:focus:border-red-400"
       ></textarea>
 
       <div className="flex flex-row items-center justify-start">
-        <Button type="submit" variant="primary" className={`group mt-6 w-full ${checkFields() ? 'opacity-50' : ''}`} disabled={checkFields() || formSubmitted} submitted={formSubmitted} error={formError}>
-          {formError ? formText.button.error : formSubmitted ? formText.button.submitted : formText.submit}
-          <FontAwesomeIcon icon={faPaperPlane} className={`h-4 w-4 text-zinc-500 transition  dark:text-zinc-400 ${!checkFields() && !formSubmitted
-            ? "group-hover:text-red-500 dark:group-hover:text-red-400"
-            : ""
-            }`} />
+        <Button
+          type="submit"
+          variant="primary"
+          className={`group mt-6 w-full ${checkFields() ? 'opacity-50' : ''}`}
+          disabled={checkFields() || formSubmitted}
+          submitted={formSubmitted}
+          error={formError}
+        >
+          {formError
+            ? formText.button.error
+            : formSubmitted
+            ? formText.button.submitted
+            : formText.submit}
+          <FontAwesomeIcon
+            icon={faPaperPlane}
+            className={`h-4 w-4 text-zinc-500 transition  dark:text-zinc-400 ${
+              !checkFields() && !formSubmitted
+                ? 'group-hover:text-red-500 dark:group-hover:text-red-400'
+                : ''
+            }`}
+          />
         </Button>
       </div>
     </form>

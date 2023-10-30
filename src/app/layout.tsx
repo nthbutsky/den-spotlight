@@ -8,6 +8,7 @@ import { config } from '@fortawesome/fontawesome-svg-core'
 config.autoAddCss = false
 
 import '@/styles/tailwind.css'
+import Analytics from '@/components/Analytics'
 
 export const metadata: Metadata = {
   title: {
@@ -31,6 +32,7 @@ export default function RootLayout({
             <Layout>{children}</Layout>
           </div>
         </Providers>
+        <Analytics />
       </body>
     </html>
   )

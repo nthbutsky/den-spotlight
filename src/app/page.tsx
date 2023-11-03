@@ -178,16 +178,6 @@ function About() {
 function Resume() {
   let resume: Array<Role> = [
     {
-      company: 'UBC',
-      title: 'Web Developer',
-      logo: logoUbc,
-      start: '2023',
-      end: {
-        label: 'Present',
-        dateTime: new Date().getFullYear().toString(),
-      },
-    },
-    {
       company: 'Convidera',
       title: 'Frontend Developer',
       logo: logoConvidera,
@@ -196,6 +186,13 @@ function Resume() {
         label: 'Present',
         dateTime: new Date().getFullYear().toString(),
       },
+    },
+    {
+      company: 'UBC',
+      title: 'Web Developer',
+      logo: logoUbc,
+      start: '2023',
+      end: '2023',
     },
     {
       company: 'Freelance / Career Break',

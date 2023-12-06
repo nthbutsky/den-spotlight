@@ -19,7 +19,7 @@ const projects = [
     description:
       'Main website for Microbiology & Immunology Department of University of British Columbia.',
     stack: 'Drupal, SCSS, JavaScript, PHP, MySQL, Docker',
-    link: { href: '#', label: 'Dev Stage' },
+    link: { href: 'https://mbim.ubc.ca/', label: 'mbim.ubc.ca' },
     logo: logoUbc,
   },
   {

@@ -63,7 +63,7 @@ const projects = [
     name: 'Efficiency App',
     description: 'Mini office app, consolidating all you need in one, but without distraction.',
     stack: 'Vue, Vuetify, SCSS',
-    link: { href: 'https://nthbutsky.github.io/efficiency-app/login', label: 'efficiency' },
+    link: { href: 'https://nthbutsky.github.io/efficiency-app', label: 'efficiency' },
   },
   {
     name: 'PassGen',

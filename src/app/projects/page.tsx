@@ -16,27 +16,22 @@ import logoAio from '@/images/logos/aio.svg'
 const projects = [
   {
     name: 'MBIM',
-    description:
-      'Main website for Microbiology & Immunology Department of University of British Columbia.',
+    description: 'Main website for Microbiology & Immunology Department of University of British Columbia.',
     stack: 'Drupal, SCSS, JavaScript, PHP, MySQL, Docker',
     link: { href: 'https://mbim.ubc.ca/', label: 'mbim.ubc.ca' },
     logo: logoUbc,
   },
   {
     name: 'AIO Platform',
-    description:
-      'Comprehensive software solution designed for managing intelligent objects, their associated metadata, locations, and targeted URLs.',
-    stack:
-      'Vue, TypeScript, Vite, Tailwind, GO, GraphQL, Laravel, Docker, Kubernetes, PHP, Plesk, Auth0',
+    description: 'Comprehensive software solution designed for managing intelligent objects, their associated metadata, locations, and targeted URLs.',
+    stack: 'Vue, TypeScript, Vite, Tailwind, GO, GraphQL, Laravel, Docker, Kubernetes, PHP, Plesk, Auth0',
     link: { href: '#', label: 'Dev Stage' },
     logo: logoAio,
   },
   {
     name: 'AIO Landing Page',
-    description:
-      'Fancy landing page for marketing team to promote AIO Platform.',
-    stack:
-      'Vue, Vite, Laravel, Statamic, Tailwind, TypeScript, Docker, Hubspot',
+    description: 'Fancy landing page for marketing team to promote AIO Platform.',
+    stack: 'Vue, Vite, Laravel, Statamic, Tailwind, TypeScript, Docker, Hubspot',
     link: {
       href: 'https://landing.connect-one.devcon.team/',
       label: 'Pre Prod',
@@ -46,25 +41,83 @@ const projects = [
   {
     name: 'Speekly',
     description: 'Platform for user generated content videos.',
-    stack:
-      'Laravel, Alpine, Tailwind, Docker, Kubernetes, PHP, Stripe, Livewire, Statamic, Hubspot',
+    stack: 'Laravel, Alpine, Tailwind, Docker, Kubernetes, PHP, Stripe, Livewire, Statamic, Hubspot',
     link: { href: 'https://speekly.de/', label: 'speekly.de' },
     logo: logoSpeekly,
   },
   {
     name: 'Virtrex',
     description: 'B2B platform for shortening sales cycle.',
-    stack: 'Vue, Laravel, SASS, TypeScript, Vite, PHP, Docker',
+    stack: 'Vue, Laravel, SCSS, TypeScript, Vite, PHP, Docker',
     link: { href: 'https://www.virtrex.de/', label: 'virtrex.de' },
     logo: logoVirtrex,
   },
   {
     name: 'REMEX',
-    description:
-      'A portal for the expert in mineral disposal, including recycling, utilization or disposal of mineral waste.',
-    stack: 'Vue, Nuxt, TypeScript, Webpack, SASS, Tailwind, PHP, Docker',
+    description: 'A portal for the expert in mineral disposal, including recycling, utilization or disposal of mineral waste.',
+    stack: 'Vue, Nuxt, TypeScript, Webpack, SCSS, Tailwind, PHP, Docker',
     link: { href: 'https://www.remex.de/', label: 'remex.de' },
     logo: logoRemex,
+  },
+  {
+    name: 'Efficiency App',
+    description: 'Mini office app, consolidating all you need in one, but without distraction.',
+    stack: 'Vue, Vuetify, SCSS',
+    link: { href: 'https://nthbutsky.github.io/efficiency-app/login', label: 'efficiency' },
+  },
+  {
+    name: 'PassGen',
+    description: 'A Password Generator.',
+    stack: 'JavaScript, CSS',
+    link: { href: 'https://nthbutsky.github.io/password-generator-js/', label: 'pass-gen' },
+  },
+  {
+    name: 'Template Landing',
+    description: 'A template portfolio landing page.',
+    stack: 'JavaScript, SCSS',
+    link: { href: 'https://nthbutsky.github.io/ba-fe-practice-1/', label: 'landing' },
+  },
+  {
+    name: 'Memory Card Game',
+    description: 'A simple memory card game for online marketplace.',
+    stack: 'Vue, TypeScript, SCSS',
+    link: { href: 'https://nthbutsky.github.io/maudau-memory-card-game/login', label: 'game' },
+  },
+  {
+    name: 'Meowoof',
+    description: 'Cat and Dog breeds info app based on TheCatAPI and TheDogAPI.',
+    stack: 'Vue, SCSS',
+    link: { href: 'https://nthbutsky.github.io/meowoof/', label: 'meowoof' },
+  },
+  {
+    name: 'Productly',
+    description: 'A responsive landing page.',
+    stack: 'HTML, SCSS',
+    link: { href: 'https://nthbutsky.github.io/ba-fe/pages/productly.html', label: 'productly' },
+  },
+  {
+    name: 'Monticello',
+    description: 'A responsive landing page.',
+    stack: 'JavaScript, HTML, SCSS',
+    link: { href: 'https://nthbutsky.github.io/ba-fe-exam-2/', label: 'monticello' },
+  },
+  {
+    name: 'Akad',
+    description: 'A responsive landing page.',
+    stack: 'JavaScript, HTML, SCSS',
+    link: { href: 'https://nthbutsky.github.io/ba-fe-js-bootstrap/', label: 'akad' },
+  },
+  {
+    name: 'Design Lab',
+    description: 'A responsive landing page.',
+    stack: 'JavaScript, HTML, SCSS',
+    link: { href: 'https://nthbutsky.github.io/ba-fe/pages/design-lab-15.html', label: 'design-lab' },
+  },
+  {
+    name: 'Cahee',
+    description: 'A responsive landing page.',
+    stack: 'JavaScript, HTML, SCSS',
+    link: { href: 'https://nthbutsky.github.io/ba-fe/pages/cahee-responsive-18.html', label: 'cahee' },
   },
 ]
 
@@ -74,6 +127,16 @@ export const metadata: Metadata = {
 }
 
 export default function Projects() {
+
+  const getRandomColor = () => {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  };
+
   return (
     <SimpleLayout
       title="Things I’ve been part of, trying to make a difference."
@@ -86,12 +149,16 @@ export default function Projects() {
         {projects.map((project) => (
           <Card as="li" key={project.name}>
             <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-              <Image
+              {project.logo ? (
+                  <Image
                 src={project.logo}
                 alt=""
                 className="h-8 w-8 rounded-full"
                 unoptimized
               />
+              ) : (
+                <div className="h-8 w-8 rounded-full" style={{ backgroundColor: getRandomColor() }}/>
+              )}
             </div>
             <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
               <Card.Link href={project.link.href}>{project.name}</Card.Link>

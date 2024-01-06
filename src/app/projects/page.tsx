@@ -66,28 +66,10 @@ const projects = [
     link: { href: 'https://nthbutsky.github.io/efficiency-app', label: 'efficiency' },
   },
   {
-    name: 'PassGen',
-    description: 'A Password Generator.',
-    stack: 'JavaScript, CSS',
-    link: { href: 'https://nthbutsky.github.io/password-generator-js/', label: 'pass-gen' },
-  },
-  {
     name: 'Template Landing',
     description: 'A template portfolio landing page.',
     stack: 'JavaScript, SCSS',
     link: { href: 'https://nthbutsky.github.io/ba-fe-practice-1/', label: 'landing' },
-  },
-  {
-    name: 'Memory Card Game',
-    description: 'A simple memory card game for online marketplace.',
-    stack: 'Vue, TypeScript, SCSS',
-    link: { href: 'https://nthbutsky.github.io/maudau-memory-card-game/login', label: 'game' },
-  },
-  {
-    name: 'Meowoof',
-    description: 'Cat and Dog breeds info app based on TheCatAPI and TheDogAPI.',
-    stack: 'Vue, SCSS',
-    link: { href: 'https://nthbutsky.github.io/meowoof/', label: 'meowoof' },
   },
   {
     name: 'Productly',
@@ -118,6 +100,24 @@ const projects = [
     description: 'A responsive landing page.',
     stack: 'JavaScript, HTML, SCSS',
     link: { href: 'https://nthbutsky.github.io/ba-fe/pages/cahee-responsive-18.html', label: 'cahee' },
+  },
+  {
+    name: 'Memory Card Game',
+    description: 'A simple memory card game for online marketplace.',
+    stack: 'Vue, TypeScript, SCSS',
+    link: { href: 'https://nthbutsky.github.io/maudau-memory-card-game/login', label: 'game' },
+  },
+  {
+    name: 'Meowoof',
+    description: 'Cat and Dog breeds info app based on TheCatAPI and TheDogAPI.',
+    stack: 'Vue, SCSS',
+    link: { href: 'https://nthbutsky.github.io/meowoof/', label: 'meowoof' },
+  },
+  {
+    name: 'PassGen',
+    description: 'A Password Generator.',
+    stack: 'JavaScript, CSS',
+    link: { href: 'https://nthbutsky.github.io/password-generator-js/', label: 'pass-gen' },
   },
 ]
 

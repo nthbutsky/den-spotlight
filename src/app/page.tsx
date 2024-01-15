@@ -179,7 +179,7 @@ function Resume() {
   let resume: Array<Role> = [
     {
       company: 'Convidera',
-      title: 'Frontend Developer',
+      title: 'Front End Developer',
       logo: logoConvidera,
       start: '2022',
       end: {
@@ -195,7 +195,7 @@ function Resume() {
       end: '2023',
     },
     {
-      company: 'Freelance / Career Break',
+      company: 'Freelance',
       title: 'Entrepreneur',
       logo: logoFreelance,
       start: '2021',
@@ -203,14 +203,14 @@ function Resume() {
     },
     {
       company: 'CloudMade',
-      title: 'Support Engineer / Fleet Manager',
+      title: 'Fleet Engineer',
       logo: logoCloudmade,
       start: '2020',
       end: '2021',
     },
     {
       company: 'The U.S. Embassy',
-      title: 'Consular Assistant / Analyst',
+      title: 'Consular Analyst',
       logo: logoUsEmbassy,
       start: '2015',
       end: '2019',

@@ -15,30 +15,6 @@ import logoAio from '@/images/logos/aio.svg'
 
 const projects = [
   {
-    name: 'MBIM',
-    description: 'Main website for Microbiology & Immunology Department of University of British Columbia.',
-    stack: 'Drupal, SCSS, JavaScript, PHP, MySQL, Docker',
-    link: { href: 'https://mbim.ubc.ca/', label: 'mbim.ubc.ca' },
-    logo: logoUbc,
-  },
-  {
-    name: 'AIO Platform',
-    description: 'Comprehensive software solution designed for managing intelligent objects, their associated metadata, locations, and targeted URLs.',
-    stack: 'Vue, TypeScript, Vite, Tailwind, GO, GraphQL, Laravel, Docker, Kubernetes, PHP, Plesk, Auth0',
-    link: { href: '#', label: 'Dev Stage' },
-    logo: logoAio,
-  },
-  {
-    name: 'AIO Landing Page',
-    description: 'Fancy landing page for marketing team to promote AIO Platform.',
-    stack: 'Vue, Vite, Laravel, Statamic, Tailwind, TypeScript, Docker, Hubspot',
-    link: {
-      href: 'https://landing.connect-one.devcon.team/',
-      label: 'Pre Prod',
-    },
-    logo: logoAio,
-  },
-  {
     name: 'Speekly',
     description: 'Platform for user generated content videos.',
     stack: 'Laravel, Alpine, Tailwind, Docker, Kubernetes, PHP, Stripe, Livewire, Statamic, Hubspot',
@@ -58,6 +34,30 @@ const projects = [
     stack: 'Vue, Nuxt, TypeScript, Webpack, SCSS, Tailwind, PHP, Docker',
     link: { href: 'https://www.remex.de/', label: 'remex.de' },
     logo: logoRemex,
+  },
+  {
+    name: 'AIO Landing Page',
+    description: 'Fancy landing page for marketing team to promote AIO Platform.',
+    stack: 'Vue, Vite, Laravel, Statamic, Tailwind, TypeScript, Docker, Hubspot',
+    link: {
+      href: 'https://landing.connect-one.devcon.team/',
+      label: 'Pre Prod',
+    },
+    logo: logoAio,
+  },
+  {
+    name: 'MBIM',
+    description: 'Main website for Microbiology & Immunology Department of University of British Columbia.',
+    stack: 'Drupal, SCSS, JavaScript, PHP, MySQL, Docker',
+    link: { href: 'https://mbim.ubc.ca/', label: 'mbim.ubc.ca' },
+    logo: logoUbc,
+  },
+  {
+    name: 'AIO Platform',
+    description: 'Comprehensive software solution designed for managing intelligent objects, their associated metadata, locations, and targeted URLs.',
+    stack: 'Vue, TypeScript, Vite, Tailwind, GO, GraphQL, Laravel, Docker, Kubernetes, PHP, Plesk, Auth0',
+    link: { href: '#', label: 'Dev Stage' },
+    logo: logoAio,
   },
   {
     name: 'Efficiency App',

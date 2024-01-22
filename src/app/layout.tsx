@@ -13,7 +13,7 @@ import Analytics from '@/components/Analytics'
 export const metadata: Metadata = {
   title: {
     template: '%s - Denis Butsky',
-    default: 'Denis Butsky - Tech wizard, photographer, and Swiss Army Knife.',
+    default: 'Denis Butsky - Tech wizard, photographer, Swiss Army Knife.',
   },
   description:
     'I’m Denis Butsky, a web developer and problem-solver. I live in Vancouver BC, where I design the future.',

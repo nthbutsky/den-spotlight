@@ -299,8 +299,9 @@ export default function Home() {
             Tech wizard, photographer, Swiss Army Knife.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Denis Butsky, a web developer and problem-solver. I live in
-            Vancouver BC, where I design the future.
+            I’m Denis Butsky, a web developer and a problem-solver. 
+            <br />
+            I live in Vancouver BC, where I design the future.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink

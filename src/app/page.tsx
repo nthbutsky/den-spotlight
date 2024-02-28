@@ -3,7 +3,7 @@
 import Image, { type ImageProps } from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -18,6 +18,8 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import ContactForm from '@/components/ContactForm'
+import { DirectionAwareHover } from '@/components/ui/direction-aware-hover'
+import { TextGenerateEffect } from '@/components/ui/text-generate-effect'
 
 import logoUbc from '@/images/logos/ubc.svg'
 import logoConvidera from '@/images/logos/convidera.svg'
@@ -26,11 +28,11 @@ import logoCloudmade from '@/images/logos/cloudmade.svg'
 import logoUsEmbassy from '@/images/logos/us-embassy.svg'
 import logoPolandConsulate from '@/images/logos/poland-consulate.svg'
 import logoVfs from '@/images/logos/vfs.svg'
-import image1 from '@/images/photos/homepage/image1.webp'
-import image2 from '@/images/photos/homepage/image2.webp'
-import image3 from '@/images/photos/homepage/image3.webp'
-import image4 from '@/images/photos/homepage/image4.webp'
-import image5 from '@/images/photos/homepage/image5.webp'
+import imageAre from '@/images/photos/homepage/are.webp'
+import imageFra from '@/images/photos/homepage/fra.webp'
+import imageRou from '@/images/photos/homepage/rou.webp'
+import imageSvn from '@/images/photos/homepage/svn.webp'
+import imageUsa from '@/images/photos/homepage/usa.webp'
 import portraitImage from '@/images/portrait.webp'
 
 interface Role {
@@ -51,7 +53,7 @@ function SocialLink({
     <Link className="group -m-1 p-1" {...props}>
       <FontAwesomeIcon
         icon={Icon}
-        className="h-6 w-6 text-zinc-500 transition group-hover:text-zinc-600 dark:text-zinc-400 dark:group-hover:text-zinc-300"
+        className="h-6 w-6 text-zinc-500 transition group-hover:text-red-500 dark:text-zinc-400 dark:group-hover:text-red-400"
       />
     </Link>
   )
@@ -101,24 +103,46 @@ function Role({ role }: { role: Role }) {
 
 function Photos() {
   let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
+  const itemList = [
+    {
+      image: imageUsa,
+      text: 'USA',
+    },
+    {
+      image: imageAre,
+      text: 'UAE',
+    },
+    {
+      image: imageSvn,
+      text: 'Slovenia',
+    },
+    {
+      image: imageRou,
+      text: 'Romania',
+    },
+    {
+      image: imageFra,
+      text: 'France',
+    },
+  ]
 
   return (
     <div className="mt-16 sm:mt-20">
       <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-        {[image4, image5, image2, image3, image1].map((image, imageIndex) => (
+        {itemList.map((item, itemIndex) => (
           <div
-            key={image.src}
+            key={itemIndex}
             className={clsx(
               'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl',
-              rotations[imageIndex % rotations.length],
+              rotations[itemIndex % rotations.length],
             )}
           >
-            <Image
-              src={image}
-              alt=""
-              sizes="(min-width: 640px) 18rem, 11rem"
-              className="absolute inset-0 h-full w-full object-cover"
-            />
+            <DirectionAwareHover
+              imageUrl={item.image.src}
+              imageClassName="absolute inset-0 h-full w-full object-cover"
+            >
+              {/* <p className="text-xl font-bold opacity-50">{item.text}</p> */}
+            </DirectionAwareHover>
           </div>
         ))}
       </div>
@@ -131,14 +155,16 @@ function About() {
     <div className="grid grid-cols-1">
       <div className="lg:order-first lg:row-span-2">
         <h2 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-          Crafting Code, Capturing Moments, and Fueling Curiosity.
+          <TextGenerateEffect
+            words={'Crafting Code, Capturing Moments, and Fueling Curiosity.'}
+          />
         </h2>
-        <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
+        <div className="text mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
           <p>
             Hey there! I am a dynamic professional who thrives at the
             intersection of creativity and technology. My journey is guided by a
             set of values and skills that define not only my career but also my
-            approach to life.
+            approach to life.'
           </p>
           <p>
             I have loved making things for as long as I can remember, especially
@@ -296,13 +322,18 @@ export default function Home() {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Tech wizard, photographer, Swiss Army Knife.
+            <TextGenerateEffect
+              words={'Tech wizard, photographer, Swiss Army Knife.'}
+            />
           </h1>
-          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Denis Butsky, a web developer and a problem-solver. 
-            <br />
-            I live in Vancouver BC, where I design the future.
-          </p>
+          <div className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+            <TextGenerateEffect
+              words={'I’m Denis Butsky, a web developer and a problem-solver.'}
+            />
+            <TextGenerateEffect
+              words={'I live in Vancouver BC, where I design the future.'}
+            />
+          </div>
           <div className="mt-6 flex gap-6">
             <SocialLink
               href="https://github.com/nthbutsky"

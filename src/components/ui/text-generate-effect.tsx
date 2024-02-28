@@ -41,9 +41,7 @@ export const TextGenerateEffect = ({
 
   return (
     <div className={cn(className)}>
-      <div className="">
-        <div className="tracking-wide">{renderWords()}</div>
-      </div>
+      <div className="tracking-wide">{renderWords()}</div>
     </div>
   )
 }

@@ -155,16 +155,14 @@ function About() {
     <div className="grid grid-cols-1">
       <div className="lg:order-first lg:row-span-2">
         <h2 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-          <TextGenerateEffect
-            words={'Crafting Code, Capturing Moments, and Fueling Curiosity.'}
-          />
+          <TextGenerateEffect words="Crafting Code, Capturing Moments, and Fueling Curiosity." />
         </h2>
         <div className="text mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
           <p>
             Hey there! I am a dynamic professional who thrives at the
             intersection of creativity and technology. My journey is guided by a
             set of values and skills that define not only my career but also my
-            approach to life.'
+            approach to life.
           </p>
           <p>
             I have loved making things for as long as I can remember, especially
@@ -322,17 +320,11 @@ export default function Home() {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            <TextGenerateEffect
-              words={'Tech wizard, photographer, Swiss Army Knife.'}
-            />
+            <TextGenerateEffect words="Tech wizard, photographer, Swiss Army Knife." />
           </h1>
           <div className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            <TextGenerateEffect
-              words={'I’m Denis Butsky, a web developer and a problem-solver.'}
-            />
-            <TextGenerateEffect
-              words={'I live in Vancouver BC, where I design the future.'}
-            />
+            <TextGenerateEffect words="I’m Denis Butsky, a web developer and a problem-solver." />
+            <TextGenerateEffect words="I live in Vancouver BC, where I design the future." />
           </div>
           <div className="mt-6 flex gap-6">
             <SocialLink

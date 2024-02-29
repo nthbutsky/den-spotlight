@@ -193,9 +193,11 @@ export default function Projects() {
                 />
               ) : (
                 <div
-                  className="h-8 w-8 rounded-full bg-white"
+                  className="flex h-8 w-8 items-center justify-center rounded-full bg-white"
                   // style={{ backgroundColor: getRandomColor() }}
-                />
+                >
+                  <p className="font-bold text-zinc-800">{project.name[0]}</p>
+                </div>
               )}
             </div>
             <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">

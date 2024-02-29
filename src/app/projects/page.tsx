@@ -3,6 +3,7 @@ import Image from 'next/image'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
+import { TextGenerateEffect } from '@/components/ui/text-generate-effect'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLink } from '@fortawesome/free-solid-svg-icons'
@@ -173,13 +174,18 @@ export default function Projects() {
   // }
 
   return (
-    <SimpleLayout
-      title="Things I’ve been part of, trying to make a difference."
-      intro="I’ve worked on many projects over the years but these are the ones that I’m most proud of. Some of them are in development currently, so the links might be on and off at some point."
-    >
+    <SimpleLayout>
+      <header className="max-w-2xl">
+        <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+          <TextGenerateEffect words="Things I’ve been part of, trying to make a difference." />
+        </h1>
+        <div className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+          <TextGenerateEffect words="I’ve worked on many projects over the years but these are the ones that I’m most proud of. Some of them are in development currently, so the links might be on and off at some point." />
+        </div>
+      </header>
       <ul
         role="list"
-        className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
+        className="mt-16 grid grid-cols-1 gap-x-12 gap-y-16 sm:mt-20 sm:grid-cols-2 lg:grid-cols-3"
       >
         {projects.map((project) => (
           <Card as="li" key={project.name}>

@@ -28,11 +28,11 @@ import logoCloudmade from '@/images/logos/cloudmade.svg'
 import logoUsEmbassy from '@/images/logos/us-embassy.svg'
 import logoPolandConsulate from '@/images/logos/poland-consulate.svg'
 import logoVfs from '@/images/logos/vfs.svg'
-import imageAre from '@/images/photos/homepage/are.webp'
-import imageFra from '@/images/photos/homepage/fra.webp'
-import imageRou from '@/images/photos/homepage/rou.webp'
-import imageSvn from '@/images/photos/homepage/svn.webp'
-import imageUsa from '@/images/photos/homepage/usa.webp'
+import image1 from '@/images/photos/homepage/1.webp'
+import image2 from '@/images/photos/homepage/2.webp'
+import image3 from '@/images/photos/homepage/3.webp'
+import image4 from '@/images/photos/homepage/4.webp'
+import image5 from '@/images/photos/homepage/5.webp'
 import portraitImage from '@/images/portrait.webp'
 
 interface Role {
@@ -105,23 +105,23 @@ function Photos() {
   let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
   const itemList = [
     {
-      image: imageUsa,
+      image: image1,
       text: 'USA',
     },
     {
-      image: imageAre,
+      image: image2,
       text: 'UAE',
     },
     {
-      image: imageSvn,
+      image: image3,
       text: 'Slovenia',
     },
     {
-      image: imageRou,
+      image: image4,
       text: 'Romania',
     },
     {
-      image: imageFra,
+      image: image5,
       text: 'France',
     },
   ]

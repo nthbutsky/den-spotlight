@@ -18,7 +18,6 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import ContactForm from '@/components/ContactForm'
-import { DirectionAwareHover } from '@/components/ui/direction-aware-hover'
 import { TextGenerateEffect } from '@/components/ui/text-generate-effect'
 
 import logoUbc from '@/images/logos/ubc.svg'
@@ -103,46 +102,24 @@ function Role({ role }: { role: Role }) {
 
 function Photos() {
   let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
-  const itemList = [
-    {
-      image: image1,
-      text: 'USA',
-    },
-    {
-      image: image2,
-      text: 'UAE',
-    },
-    {
-      image: image3,
-      text: 'Slovenia',
-    },
-    {
-      image: image4,
-      text: 'Romania',
-    },
-    {
-      image: image5,
-      text: 'France',
-    },
-  ]
 
   return (
     <div className="mt-16 sm:mt-20">
       <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-        {itemList.map((item, itemIndex) => (
+        {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
           <div
-            key={itemIndex}
+            key={image.src}
             className={clsx(
               'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl',
-              rotations[itemIndex % rotations.length],
+              rotations[imageIndex % rotations.length],
             )}
           >
-            <DirectionAwareHover
-              imageUrl={item.image.src}
-              imageClassName="absolute inset-0 h-full w-full object-cover"
-            >
-              {/* <p className="text-xl font-bold opacity-50">{item.text}</p> */}
-            </DirectionAwareHover>
+            <Image
+              src={image}
+              alt=""
+              sizes="(min-width: 640px) 18rem, 11rem"
+              className="absolute inset-0 h-full w-full object-cover"
+            />
           </div>
         ))}
       </div>

@@ -280,7 +280,7 @@ function Resume() {
       <ol className="mt-6 space-y-4">
         {resume.map(
           (role, roleIndex) =>
-            (showMoreRoles || roleIndex < 4) && (
+            (showMoreRoles || roleIndex < 2) && (
               <Role key={roleIndex} role={role} />
             ),
         )}
@@ -291,7 +291,7 @@ function Resume() {
           className="group mt-6 w-full"
           onClick={toggleShowMoreRoles}
         >
-          Show more
+          Show all
           <FontAwesomeIcon
             icon={faPlus}
             className="h-4 w-4 text-zinc-500 transition group-hover:text-red-500 dark:text-zinc-400 dark:group-hover:text-red-400"

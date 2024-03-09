@@ -19,10 +19,10 @@ const projects = [
   {
     name: 'Velux',
     description:
-      'Sophisticated software solutions for one of the largest manufacturer of windows and accessories in Europe.',
+      'Sophisticated software solutions for one of the largest and oldest manufacturer of windows and accessories in the World.',
     stack:
       'Vue, TypeScript, Vite, SCSS, GraphQL, Laravel, Docker, Kubernetes, PHP, Plesk, Auth0, .NET',
-    link: { href: 'https://www.velux.de/', label: 'velux.de' },
+    link: { href: 'https://www.velux.com/', label: 'velux.com' },
     logo: logoVelux,
   },
   {

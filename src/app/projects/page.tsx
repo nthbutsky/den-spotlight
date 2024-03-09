@@ -13,42 +13,17 @@ import logoRemex from '@/images/logos/remex.svg'
 import logoVirtrex from '@/images/logos/virtrex.svg'
 import logoSpeekly from '@/images/logos/speekly.svg'
 import logoAio from '@/images/logos/aio.svg'
+import logoVelux from '@/images/logos/velux.svg'
 
 const projects = [
   {
-    name: 'Speekly',
-    description: 'Platform for user generated content videos.',
-    stack:
-      'Laravel, Alpine, Tailwind, Docker, Kubernetes, PHP, Stripe, Livewire, Statamic, Hubspot',
-    link: { href: 'https://speekly.de/', label: 'speekly.de' },
-    logo: logoSpeekly,
-  },
-  {
-    name: 'Virtrex',
-    description: 'B2B platform for shortening sales cycle.',
-    stack: 'Vue, Laravel, SCSS, TypeScript, Vite, PHP, Docker',
-    link: { href: 'https://www.virtrex.de/', label: 'virtrex.de' },
-    logo: logoVirtrex,
-  },
-  {
-    name: 'REMEX',
+    name: 'Velux',
     description:
-      'A portal for the expert in mineral disposal, including recycling, utilization or disposal of mineral waste.',
-    stack: 'Vue, Nuxt, TypeScript, Webpack, SCSS, Tailwind, PHP, Docker',
-    link: { href: 'https://www.remex.de/', label: 'remex.de' },
-    logo: logoRemex,
-  },
-  {
-    name: 'AIO Landing Page',
-    description:
-      'Fancy landing page for marketing team to promote AIO Platform.',
+      'Sophisticated software solutions for one of the largest manufacturer of windows and accessories in Europe.',
     stack:
-      'Vue, Vite, Laravel, Statamic, Tailwind, TypeScript, Docker, Hubspot',
-    link: {
-      href: 'https://landing.connect-one.devcon.team/',
-      label: 'Pre Prod',
-    },
-    logo: logoAio,
+      'Vue, TypeScript, Vite, SCSS, GraphQL, Laravel, Docker, Kubernetes, PHP, Plesk, Auth0, .NET',
+    link: { href: 'https://www.velux.de/', label: 'velux.de' },
+    logo: logoVelux,
   },
   {
     name: 'MBIM',
@@ -59,13 +34,57 @@ const projects = [
     logo: logoUbc,
   },
   {
-    name: 'AIO Platform',
+    name: 'AIO',
     description:
-      'Comprehensive software solution designed for managing intelligent objects, their associated metadata, locations, and targeted URLs.',
+      'Fancy landing page for marketing team to promote AIO Platform.',
     stack:
-      'Vue, TypeScript, Vite, Tailwind, GO, GraphQL, Laravel, Docker, Kubernetes, PHP, Plesk, Auth0',
-    link: { href: '#', label: 'Dev Stage' },
+      'Vue, Vite, Laravel, Statamic, Tailwind, TypeScript, Docker, Hubspot',
+    link: {
+      href: 'https://landing.connect-one.devcon.team/',
+      label: 'pre-prod',
+    },
     logo: logoAio,
+  },
+  {
+    name: 'Speekly',
+    description: 'Platform for user generated content videos.',
+    stack:
+      'Laravel, Alpine, Tailwind, Docker, Kubernetes, PHP, Stripe, Livewire, Statamic, Hubspot',
+    link: { href: 'https://speekly.de/', label: 'speekly.de' },
+    logo: logoSpeekly,
+  },
+  {
+    name: 'Remex',
+    description:
+      'A portal for the expert in mineral disposal, including recycling, utilization or disposal of mineral waste.',
+    stack: 'Vue, Nuxt, TypeScript, Webpack, SCSS, Tailwind, PHP, Docker',
+    link: { href: 'https://www.remex.de/', label: 'remex.de' },
+    logo: logoRemex,
+  },
+  {
+    name: 'Virtrex',
+    description: 'B2B platform for shortening sales cycle.',
+    stack: 'Vue, Laravel, SCSS, TypeScript, Vite, PHP, Docker',
+    link: { href: 'https://www.virtrex.de/', label: 'virtrex.de' },
+    logo: logoVirtrex,
+  },
+  {
+    name: 'Memory Card Game',
+    description: 'A simple memory card game for online marketplace.',
+    stack: 'Vue, TypeScript, SCSS',
+    link: {
+      href: 'https://nthbutsky.github.io/maudau-memory-card-game/login',
+      label: 'game',
+    },
+  },
+  {
+    name: 'PassGen',
+    description: 'A Password Generator.',
+    stack: 'JavaScript, CSS',
+    link: {
+      href: 'https://nthbutsky.github.io/password-generator-js/',
+      label: 'pass-gen',
+    },
   },
   {
     name: 'Efficiency App',
@@ -132,29 +151,11 @@ const projects = [
     },
   },
   {
-    name: 'Memory Card Game',
-    description: 'A simple memory card game for online marketplace.',
-    stack: 'Vue, TypeScript, SCSS',
-    link: {
-      href: 'https://nthbutsky.github.io/maudau-memory-card-game/login',
-      label: 'game',
-    },
-  },
-  {
     name: 'Meowoof',
     description:
       'Cat and Dog breeds info app based on TheCatAPI and TheDogAPI.',
     stack: 'Vue, SCSS',
     link: { href: 'https://nthbutsky.github.io/meowoof/', label: 'meowoof' },
-  },
-  {
-    name: 'PassGen',
-    description: 'A Password Generator.',
-    stack: 'JavaScript, CSS',
-    link: {
-      href: 'https://nthbutsky.github.io/password-generator-js/',
-      label: 'pass-gen',
-    },
   },
 ]
 

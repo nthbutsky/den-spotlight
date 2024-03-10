@@ -300,7 +300,9 @@ export default function Home() {
             <TextGenerateEffect words="Tech Wizard, Photographer, Swiss Army Knife." />
           </h1>
           <div className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            <TextGenerateEffect words="I’m Denis Butsky, a web developer and a problem-solver." />
+            <div className="max-w-[300px] sm:max-w-none">
+              <TextGenerateEffect words="I’m Denis Butsky, a web developer and a problem-solver." />
+            </div>
             <TextGenerateEffect words="I live in Vancouver BC, where I design the future." />
           </div>
           <div className="mt-6 flex gap-6">

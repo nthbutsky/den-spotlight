@@ -55,7 +55,7 @@ export default function Tech() {
       <div className="mt-16 space-y-8 sm:mt-20">
         <ToolsSection title="Stack">
           <Tool title="Web">
-            Vue, Nuxt, JavaScript, TypeScript, Tailwind, Firebase, GraphQL,
+            JavaScript, TypeScript, Vue, Nuxt, React, Next, Tailwind, Firebase, GraphQL,
             Docker
           </Tool>
           <Tool title="OS">MacOS, Linux, Windows, Android, Raspberry Pi</Tool>

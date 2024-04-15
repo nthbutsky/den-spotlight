@@ -97,15 +97,6 @@ const projects = [
     },
   },
   {
-    name: 'Template Landing',
-    description: 'A template portfolio landing page.',
-    stack: 'JavaScript, SCSS',
-    link: {
-      href: 'https://nthbutsky.github.io/ba-fe-practice-1/',
-      label: 'landing',
-    },
-  },
-  {
     name: 'Productly',
     description: 'A responsive landing page.',
     stack: 'HTML, SCSS',
@@ -122,40 +113,6 @@ const projects = [
       href: 'https://nthbutsky.github.io/ba-fe-exam-2/',
       label: 'monticello',
     },
-  },
-  {
-    name: 'Akad',
-    description: 'A responsive landing page.',
-    stack: 'JavaScript, HTML, SCSS',
-    link: {
-      href: 'https://nthbutsky.github.io/ba-fe-js-bootstrap/',
-      label: 'akad',
-    },
-  },
-  {
-    name: 'Design Lab',
-    description: 'A responsive landing page.',
-    stack: 'JavaScript, HTML, SCSS',
-    link: {
-      href: 'https://nthbutsky.github.io/ba-fe/pages/design-lab-15.html',
-      label: 'design-lab',
-    },
-  },
-  {
-    name: 'Cahee',
-    description: 'A responsive landing page.',
-    stack: 'JavaScript, HTML, SCSS',
-    link: {
-      href: 'https://nthbutsky.github.io/ba-fe/pages/cahee-responsive-18.html',
-      label: 'cahee',
-    },
-  },
-  {
-    name: 'Meowoof',
-    description:
-      'Cat and Dog breeds info app based on TheCatAPI and TheDogAPI.',
-    stack: 'Vue, SCSS',
-    link: { href: 'https://nthbutsky.github.io/meowoof/', label: 'meowoof' },
   },
 ]
 

@@ -14,15 +14,27 @@ import logoVirtrex from '@/images/logos/virtrex.svg'
 import logoSpeekly from '@/images/logos/speekly.svg'
 import logoAio from '@/images/logos/aio.svg'
 import logoVelux from '@/images/logos/velux.svg'
+import logoFraalliance from '@/images/logos/fraalliance.svg'
 
 const projects = [
   {
     name: 'Velux',
     description:
-      'Sophisticated software solutions for one of the largest and oldest manufacturer of windows and accessories in the World.',
+      'Web solutions for one of the largest and oldest manufacturer of windows and accessories in the World.',
     stack:
       'Vue, TypeScript, Vite, SCSS, GraphQL, Laravel, Docker, Kubernetes, PHP, Plesk, Auth0, .NET',
-    link: { href: 'https://www.velux.com/', label: 'velux.com' },
+    link: { href: 'https://www.velux.de/', label: 'velux.de' },
+    logo: logoVelux,
+  },
+  {
+    name: 'Velux RWPC',
+    description: 'Roof window price configurator.',
+    stack:
+      'Vue, TypeScript, Vite, SCSS, GraphQL, Laravel, Docker, Kubernetes, PHP, Plesk, Auth0, .NET',
+    link: {
+      href: 'https://www.velux.de/dachfensterkonfigurator',
+      label: 'velux.de',
+    },
     logo: logoVelux,
   },
   {
@@ -50,7 +62,10 @@ const projects = [
     description: 'Platform for user generated content videos.',
     stack:
       'Laravel, Alpine, Tailwind, Docker, Kubernetes, PHP, Stripe, Livewire, Statamic, Hubspot',
-    link: { href: 'https://speekly.de/', label: 'speekly.de' },
+    link: {
+      href: 'https://speekly.de/',
+      label: 'speekly.de',
+    },
     logo: logoSpeekly,
   },
   {
@@ -58,15 +73,31 @@ const projects = [
     description:
       'A portal for the expert in mineral disposal, including recycling, utilization or disposal of mineral waste.',
     stack: 'Vue, Nuxt, TypeScript, Webpack, SCSS, Tailwind, PHP, Docker',
-    link: { href: 'https://www.remex.de/', label: 'remex.de' },
+    link: {
+      href: 'https://www.remex.de/',
+      label: 'remex.de',
+    },
     logo: logoRemex,
   },
   {
     name: 'Virtrex',
     description: 'B2B platform for shortening sales cycle.',
     stack: 'Vue, Laravel, SCSS, TypeScript, Vite, PHP, Docker',
-    link: { href: 'https://www.virtrex.de/', label: 'virtrex.de' },
+    link: {
+      href: 'https://www.virtrex.de/',
+      label: 'virtrex.de',
+    },
     logo: logoVirtrex,
+  },
+  {
+    name: 'FraAlliance',
+    description: 'Frankfurt airport flights information.',
+    stack: 'Vue, Tailwind, TypeScript, Vite, Docker',
+    link: {
+      href: 'https://passengerservices.fraalliance.de/gate/a16/',
+      label: 'passengerservices.fraalliance.de',
+    },
+    logo: logoFraalliance,
   },
   {
     name: 'Memory Card Game',
@@ -75,15 +106,6 @@ const projects = [
     link: {
       href: 'https://nthbutsky.github.io/maudau-memory-card-game/login',
       label: 'game',
-    },
-  },
-  {
-    name: 'PassGen',
-    description: 'A Password Generator.',
-    stack: 'JavaScript, CSS',
-    link: {
-      href: 'https://nthbutsky.github.io/password-generator-js/',
-      label: 'pass-gen',
     },
   },
   {
@@ -152,7 +174,7 @@ export default function Projects() {
                 <Image
                   src={project.logo}
                   alt=""
-                  className="h-8 w-8 rounded-full"
+                  className="h-8 w-8 rounded-full bg-white"
                   unoptimized
                 />
               ) : (

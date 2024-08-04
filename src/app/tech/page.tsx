@@ -55,15 +55,14 @@ export default function Tech() {
       <div className="mt-16 space-y-8 sm:mt-20">
         <ToolsSection title="Stack">
           <Tool title="Web">
-            JavaScript, TypeScript, Vue, Nuxt, React, Next, Tailwind, Firebase, GraphQL,
-            Docker
+            JavaScript, TypeScript, Vue, Nuxt, React, Next, Tailwind, PHP,
+            Python, Firebase, GraphQL, MongoDB, Docker
           </Tool>
           <Tool title="OS">MacOS, Linux, Windows, Android, Raspberry Pi</Tool>
         </ToolsSection>
         <ToolsSection title="Software">
           <Tool title="IDE">
-            Visual Studio Code, WebStorm, PhpStorm, Android Studio, Xcode,
-            Arduino IDE
+            Visual Studio Code, WebStorm, PhpStorm, Arduino IDE
           </Tool>
           <Tool title="Terminal">Warp, Hyper</Tool>
           <Tool title="Productivity">Notion, Alfred, ChatGPT</Tool>

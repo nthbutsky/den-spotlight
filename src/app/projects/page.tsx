@@ -100,6 +100,15 @@ const projects = [
     logo: logoFraalliance,
   },
   {
+    name: 'Movie Date',
+    description: 'A simple movie app.',
+    stack: 'React, TypeScript, Tailwind',
+    link: {
+      href: 'https://movie-date-six.vercel.app/',
+      label: 'movie-date',
+    },
+  },
+  {
     name: 'Memory Card Game',
     description: 'A simple memory card game for online marketplace.',
     stack: 'Vue, TypeScript, SCSS',

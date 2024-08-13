@@ -27,17 +27,6 @@ const projects = [
     logo: logoVelux,
   },
   {
-    name: 'Velux RWPC',
-    description: 'Roof window price configurator.',
-    stack:
-      'Vue, TypeScript, Vite, SCSS, GraphQL, Laravel, Docker, Kubernetes, PHP, Plesk, Auth0, .NET',
-    link: {
-      href: 'https://www.velux.de/dachfensterkonfigurator',
-      label: 'velux.de',
-    },
-    logo: logoVelux,
-  },
-  {
     name: 'MBIM',
     description:
       'Main website for Microbiology & Immunology Department of University of British Columbia.',
@@ -115,34 +104,6 @@ const projects = [
     link: {
       href: 'https://nthbutsky.github.io/maudau-memory-card-game/login',
       label: 'game',
-    },
-  },
-  {
-    name: 'Efficiency App',
-    description:
-      'Mini office app, consolidating all you need in one, but without distraction.',
-    stack: 'Vue, Vuetify, SCSS',
-    link: {
-      href: 'https://nthbutsky.github.io/efficiency-app',
-      label: 'efficiency',
-    },
-  },
-  {
-    name: 'Productly',
-    description: 'A responsive landing page.',
-    stack: 'HTML, SCSS',
-    link: {
-      href: 'https://nthbutsky.github.io/ba-fe/pages/productly.html',
-      label: 'productly',
-    },
-  },
-  {
-    name: 'Monticello',
-    description: 'A responsive landing page.',
-    stack: 'JavaScript, HTML, SCSS',
-    link: {
-      href: 'https://nthbutsky.github.io/ba-fe-exam-2/',
-      label: 'monticello',
     },
   },
 ]

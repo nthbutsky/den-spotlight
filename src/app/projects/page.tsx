@@ -101,7 +101,7 @@ const projects = [
   },
   {
     name: 'Movie Date',
-    description: 'A simple movie app.',
+    description: 'A movie search app.',
     stack: 'React, TypeScript, Tailwind',
     link: {
       href: 'https://movie-date-six.vercel.app/',
@@ -110,7 +110,7 @@ const projects = [
   },
   {
     name: 'Memory Card Game',
-    description: 'A simple memory card game for online marketplace.',
+    description: 'A memory card game for online marketplace.',
     stack: 'Vue, TypeScript, SCSS',
     link: {
       href: 'https://nthbutsky.github.io/maudau-memory-card-game/login',

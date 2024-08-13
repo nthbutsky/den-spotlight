@@ -18,15 +18,6 @@ import logoFraalliance from '@/images/logos/fraalliance.svg'
 
 const projects = [
   {
-    name: 'Velux',
-    description:
-      'Web solutions for one of the largest and oldest manufacturer of windows and accessories in the World.',
-    stack:
-      'Vue, TypeScript, Vite, SCSS, GraphQL, Laravel, Docker, Kubernetes, PHP, Plesk, Auth0, .NET',
-    link: { href: 'https://www.velux.de/', label: 'velux.de' },
-    logo: logoVelux,
-  },
-  {
     name: 'MBIM',
     description:
       'Main website for Microbiology & Immunology Department of University of British Columbia.',
@@ -42,9 +33,28 @@ const projects = [
       'Vue, Vite, Laravel, Statamic, Tailwind, TypeScript, Docker, Hubspot',
     link: {
       href: 'https://landing.connect-one.devcon.team/',
-      label: 'pre-prod',
+      label: 'connect-one',
     },
     logo: logoAio,
+  },
+  {
+    name: 'FraAlliance',
+    description: 'Frankfurt airport flights information.',
+    stack: 'Vue, Tailwind, TypeScript, Vite, Docker',
+    link: {
+      href: 'https://passengerservices.fraalliance.de/gate/a16/',
+      label: 'fraalliance.de',
+    },
+    logo: logoFraalliance,
+  },
+  {
+    name: 'Velux',
+    description:
+      'Web solutions for one of the largest and oldest manufacturer of windows and accessories in the World.',
+    stack:
+      'Vue, TypeScript, Vite, SCSS, GraphQL, Laravel, Docker, Kubernetes, PHP, Plesk, Auth0, .NET',
+    link: { href: 'https://www.velux.de/', label: 'velux.de' },
+    logo: logoVelux,
   },
   {
     name: 'Speekly',
@@ -77,16 +87,6 @@ const projects = [
       label: 'virtrex.de',
     },
     logo: logoVirtrex,
-  },
-  {
-    name: 'FraAlliance',
-    description: 'Frankfurt airport flights information.',
-    stack: 'Vue, Tailwind, TypeScript, Vite, Docker',
-    link: {
-      href: 'https://passengerservices.fraalliance.de/gate/a16/',
-      label: 'passengerservices.fraalliance.de',
-    },
-    logo: logoFraalliance,
   },
   {
     name: 'Movie Date',

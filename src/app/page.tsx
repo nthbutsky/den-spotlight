@@ -183,10 +183,7 @@ function Resume() {
       title: 'Front End Developer',
       logo: logoConvidera,
       start: '2022',
-      end: {
-        label: 'Present',
-        dateTime: new Date().getFullYear().toString(),
-      },
+      end: '2024',
     },
     {
       company: 'UBC',
@@ -196,15 +193,15 @@ function Resume() {
       end: '2023',
     },
     {
-      company: 'Freelance',
-      title: 'Entrepreneur',
+      company: 'Internship & Studying',
+      title: 'Web Developer',
       logo: logoFreelance,
       start: '2021',
       end: '2022',
     },
     {
       company: 'CloudMade',
-      title: 'Fleet Engineer',
+      title: 'Support Engineer',
       logo: logoCloudmade,
       start: '2020',
       end: '2021',

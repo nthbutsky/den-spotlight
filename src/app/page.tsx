@@ -134,7 +134,7 @@ function About() {
         <h2 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
           <TextGenerateEffect words="Crafting Code, Capturing Moments, and Fueling Curiosity." />
         </h2>
-        <div className="text mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
+        <div className="text mt-14 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
           <p>
             Hey there! I am a dynamic professional who thrives at the
             intersection of creativity and technology. My journey is guided by a
@@ -192,7 +192,7 @@ function Resume() {
     {
       company: 'CloudMade',
       title: 'Web Developer Intern',
-      logo: logoFreelance,
+      logo: logoCloudmade,
       start: '2021',
       end: '2022',
     },
@@ -291,7 +291,7 @@ export default function Home() {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            <TextGenerateEffect words="Tech Wizard, Photographer, Swiss Army Knife." />
+            <TextGenerateEffect words="Swiss Army Knife Dev, Tech Wizard, Problem-Solver." />
           </h1>
           <div className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             <div className="max-w-[300px] sm:max-w-none">

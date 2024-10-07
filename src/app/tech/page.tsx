@@ -54,11 +54,14 @@ export default function Tech() {
       </header>
       <div className="mt-16 space-y-8 sm:mt-20">
         <ToolsSection title="Stack">
-          <Tool title="Web">
+          <Tool title="Languages, Frameworks, DBs and Tools">
             JavaScript, TypeScript, Vue, Nuxt, React, Next, Tailwind, PHP,
-            Python, Firebase, GraphQL, MongoDB, Docker
+            Python, Vuex, Pinia, Redux, Zustand, Node, Firebase, GraphQL,
+            MongoDB, Docker, Vite, MySQL, MongoDB, Material UI
           </Tool>
-          <Tool title="OS">MacOS, Linux, Windows, Android, Raspberry Pi</Tool>
+          <Tool title="OS">
+            MacOS, iOS, Linux, Windows, Android, Raspberry Pi
+          </Tool>
         </ToolsSection>
         <ToolsSection title="Software">
           <Tool title="IDE">
@@ -75,7 +78,7 @@ export default function Tech() {
             MacBook Pro 14&#34; M2, MacBook Pro 13&#34; Intel, PC Asus ZenBook
             14&#34;
           </Tool>
-          <Tool title="Monitor">LG UltraFine 27&#34; 4K</Tool>
+          <Tool title="Monitor">LG UltraFine 27&#34; 4K x2</Tool>
           <Tool title="Misc">
             AirPods Pro, Fujifilm Cameras and Lenses, Prusa and Ultimaker 3D
             Printers

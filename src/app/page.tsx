@@ -136,18 +136,18 @@ function About() {
         </h2>
         <div className="text mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
           <p>
-            Hey there! I\'m a dynamic professional who thrives at the
+            Hey there! I am a dynamic professional who thrives at the
             intersection of creativity and technology. My journey is guided by a
             set of values and skills that define not only my career but also my
             approach to life.
           </p>
           <p>
-            I\'ve loved making things for as long as I can remember, especially
+            I have loved making things for as long as I can remember, especially
             fixing them. I thrive in the world of tech crafting seamless and
             efficient user experiences. I pay meticulous attention to detail,
-            ensuring that every pixel and interaction is finely tuned. I\'m
+            ensuring that every pixel and interaction is finely tuned. I am
             always at the forefront of the latest trends and best practices in
-            the field. I\'m fluent in variety of technologies and languages,
+            the field. I am fluent in variety of technologies and languages,
             ensuring a holistic approach to software development. Before diving
             headfirst into coding, I climbed the managerial and analyst ladder
             in foreign affairs and government sector. This experience made me a
@@ -157,11 +157,11 @@ function About() {
             results.
           </p>
           <p>
-            Outside of the professional realm, I\'m a passionate individual with
+            Outside of the professional realm, I am a passionate individual with
             diverse interests. I have a keen eye for photography and
             cinematography, often capturing the beauty of the world through my
             lens. My love for DIY projects, handcrafting, 3D-printing, and
-            automation keeps my creative juices flowing. I\'m also a devoted
+            automation keeps my creative juices flowing. I am also a devoted
             enthusiast of cars, bikes, engines, and electronics – constantly
             exploring the mechanics that drives our world. My fascination with
             linguistics and sci-fi fuels my curiosity about the mysteries of

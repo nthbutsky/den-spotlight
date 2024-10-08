@@ -289,9 +289,10 @@ export default function Home() {
   return (
     <>
       <Container className="mt-9">
-        <div className="max-w-2xl">
+        <div className="max-w-3xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            <TextGenerateEffect words="Swiss Army Knife Dev, Tech Wizard, Problem-Solver." />
+            <TextGenerateEffect words="Swiss Army Knife Dev," />
+            <TextGenerateEffect words="Tech Wizard, Problem-Solver." />
           </h1>
           <div className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             <div className="max-w-[300px] sm:max-w-none">

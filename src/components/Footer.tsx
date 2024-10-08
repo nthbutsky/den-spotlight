@@ -32,7 +32,7 @@ export function Footer() {
                 <NavLink href="/tech">Tech</NavLink>
               </div>
               <p className="text-sm text-zinc-400 dark:text-zinc-500">
-                Beautiful British Columbia 🇨🇦
+                🇺🇸 🇨🇦 🇺🇦
               </p>
             </div>
           </ContainerInner>

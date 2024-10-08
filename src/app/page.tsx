@@ -296,9 +296,9 @@ export default function Home() {
           </h1>
           <div className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             <div className="max-w-[300px] sm:max-w-none">
-              <TextGenerateEffect words="I’m Denis Butsky, a web developer and a problem-solver." />
+              <TextGenerateEffect words="I’m Denis Butsky, a front end developer and a problem-solver."/>
             </div>
-            <TextGenerateEffect words="I live in Vancouver BC, where I design the future." />
+            <TextGenerateEffect words="I live in present to design the future." />
           </div>
           <div className="mt-6 flex gap-6">
             <SocialLink

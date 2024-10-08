@@ -57,7 +57,8 @@ export default function Tech() {
           <Tool title="Languages, Frameworks, DBs and Tools">
             JavaScript, TypeScript, Vue, Nuxt, React, Next, Tailwind, PHP,
             Python, Vuex, Pinia, Redux, Zustand, Node, Firebase, GraphQL,
-            MongoDB, Docker, Vite, MySQL, MongoDB, Material UI
+            MongoDB, Docker, Vite, MySQL, Material UI, Chartjs, Drupal,
+            Wordpress, Webpack, CSS, HTML, Git, REST, Bootstrap
           </Tool>
           <Tool title="OS">
             MacOS, iOS, Linux, Windows, Android, Raspberry Pi
@@ -68,20 +69,19 @@ export default function Tech() {
             Visual Studio Code, WebStorm, PhpStorm, Arduino IDE
           </Tool>
           <Tool title="Terminal">Warp, Hyper</Tool>
-          <Tool title="Productivity">Notion, Alfred, ChatGPT</Tool>
+          <Tool title="Productivity">Notion, Raycast, ChatGPT</Tool>
           <Tool title="Misc">
-            CyberDuck, TablePlus, DBeaver, Adobe, Figma, Notion
+            Arc Browser, CyberDuck, TablePlus, DBeaver, Adobe, Figma, Notion
           </Tool>
         </ToolsSection>
         <ToolsSection title="Hardware">
           <Tool title="Laptop">
-            MacBook Pro 14&#34; M2, MacBook Pro 13&#34; Intel, PC Asus ZenBook
-            14&#34;
+            MacBook Pro 14&#34; M, PC Asus ZenBook 14&#34;
           </Tool>
           <Tool title="Monitor">LG UltraFine 27&#34; 4K x2</Tool>
           <Tool title="Misc">
-            AirPods Pro, Fujifilm Cameras and Lenses, Prusa and Ultimaker 3D
-            Printers
+            AirPods Pro, Fujifilm Cameras and Lenses, Prusa and Ultimaker 3D,
+            ESP32, Arduino Nano Printers
           </Tool>
         </ToolsSection>
       </div>

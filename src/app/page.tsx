@@ -270,7 +270,7 @@ function Resume() {
         </Button>
       )}
       <Button
-        href="/Resume-Denis-Butsky-Front-End-Developer-BC.pdf"
+        href="/Resume-Denis-Butsky-Front-End-Developer-CA-US.pdf"
         download="resume"
         variant="primary"
         className="group mt-6 w-full"

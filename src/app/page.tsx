@@ -298,7 +298,7 @@ export default function Home() {
             <div className="max-w-[300px] sm:max-w-none">
               <TextGenerateEffect words="I’m Denis Butsky, a front end developer and a problem-solver."/>
             </div>
-            <TextGenerateEffect words="I live in present to design the future." />
+            <TextGenerateEffect words="I live in the present to design the future." />
           </div>
           <div className="mt-6 flex gap-6">
             <SocialLink

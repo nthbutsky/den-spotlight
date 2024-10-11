@@ -57,8 +57,8 @@ export default function Tech() {
           <Tool title="Languages, Frameworks, DBs and Tools">
             JavaScript, TypeScript, Vue, Nuxt, React, Next, Tailwind, PHP,
             Python, Vuex, Pinia, Redux, Zustand, Node, Firebase, GraphQL,
-            MongoDB, Docker, Vite, MySQL, Material UI, Chartjs, Drupal,
-            Wordpress, Webpack, CSS, HTML, Git, REST, Bootstrap
+            MongoDB, Docker, Vite, MySQL, Supabase,Material UI, Chartjs, Drupal,
+            Wordpress, Webpack, CSS, HTML, Git, REST, Bootstrap, jQuery
           </Tool>
           <Tool title="OS">
             MacOS, iOS, Linux, Windows, Android, Raspberry Pi

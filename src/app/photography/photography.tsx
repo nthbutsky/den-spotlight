@@ -1,4 +1,3 @@
-import { type Metadata } from 'next'
 import Image from 'next/image'
 
 import { Card } from '@/components/Card'
@@ -6,11 +5,6 @@ import { SimpleLayout } from '@/components/SimpleLayout'
 import { TextGenerateEffect } from '@/components/ui/text-generate-effect'
 
 import { shuffle } from '@/lib/shuffleArray'
-
-export const metadata: Metadata = {
-  title: 'Photos',
-  description: 'Things I’ve made trying to put my dent in the Universe.',
-}
 
 export default function Photos() {
   const cache: Record<string, any> = {}
@@ -34,12 +28,12 @@ export default function Photos() {
 
   return (
     <SimpleLayout>
-      <header className="max-w-2xl">
+      <header className="max-w-3xl">
         <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-          <TextGenerateEffect words="Here is a visual odyssey of mine" />
+          <TextGenerateEffect words="A visual journey through my lens" />
         </h1>
         <div className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-          <TextGenerateEffect words="I love all genres of photography, from breathtaking landscapes to intimate portraits, which become a way into the human experience. Enjoy!" />
+          <TextGenerateEffect words="I’m passionate about all genres of photography, from awe-inspiring landscapes to intimate portraits, each offering a unique window into the human experience. Enjoy the journey!" />
         </div>
       </header>
       <ul

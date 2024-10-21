@@ -46,10 +46,10 @@ export default function Tech() {
     <SimpleLayout>
       <header className="max-w-2xl">
         <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-          <TextGenerateEffect words="Technologies I passion about, software and hardware I use, gadgets I love." />
+          <TextGenerateEffect words="Technologies I’m passionate about: tools, software, and gadgets I love." />
         </h1>
         <div className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-          <TextGenerateEffect words="These are some of stuff I use to navigate in my realm to build software, upgrade hardware, stay productive, or just to make feel myself more inspired and go beyond limits." />
+          <TextGenerateEffect words="These are some of the tools and technologies I use to build software, upgrade hardware, stay productive, and find inspiration — pushing the boundaries of what’s possible." />
         </div>
       </header>
       <div className="mt-16 space-y-8 sm:mt-20">

@@ -27,7 +27,8 @@ const projects = [
   },
   {
     name: 'FraAlliance',
-    description: 'Lufthansa Airlines and Frankfurt Airport flights information.',
+    description:
+      'Lufthansa Airlines and Frankfurt Airport flights information.',
     stack: 'Vue, Tailwind, TypeScript, Vite, Docker',
     link: {
       href: 'https://passengerservices.fraalliance.de/gate/a16/',
@@ -37,8 +38,7 @@ const projects = [
   },
   {
     name: 'AIO',
-    description:
-      'Landing page for marketing team to promote AIO Platform.',
+    description: 'Landing page for marketing team to promote AIO Platform.',
     stack:
       'Vue, Vite, Laravel, Statamic, Tailwind, TypeScript, Docker, Hubspot',
     link: {
@@ -110,7 +110,7 @@ const projects = [
 
 export const metadata: Metadata = {
   title: 'Projects',
-  description: 'Things I’ve been part of, trying to make a difference.',
+  description: 'Projects I’ve contributed to, striving to make an impact.',
 }
 
 export default function Projects() {
@@ -127,10 +127,10 @@ export default function Projects() {
     <SimpleLayout>
       <header className="max-w-2xl">
         <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-          <TextGenerateEffect words="Things I’ve been part of, trying to make a difference." />
+          <TextGenerateEffect words="Projects I've contributed to, striving to make an impact." />
         </h1>
         <div className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-          <TextGenerateEffect words="I’ve worked on many projects over the years but these are the ones that I’m most proud of. Some of them are in development currently, so the links might be on and off at some point." />
+          <TextGenerateEffect words="Over the years, I've had the opportunity to work on many interesting projects. Here are some of the ones, representing my dedication to innovation and creativity. While a few are still in progress, they continue to evolve as I refine and push them forward." />
         </div>
       </header>
       <ul

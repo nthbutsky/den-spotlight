@@ -3,7 +3,7 @@
 import Image, { type ImageProps } from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
-import { useState, useRef } from 'react'
+import { useState } from 'react'
 
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -22,16 +22,15 @@ import { TextGenerateEffect } from '@/components/ui/text-generate-effect'
 
 import logoUbc from '@/images/logos/ubc.svg'
 import logoConvidera from '@/images/logos/convidera.svg'
-import logoFreelance from '@/images/logos/freelance.svg'
 import logoCloudmade from '@/images/logos/cloudmade.svg'
 import logoUsEmbassy from '@/images/logos/us-embassy.svg'
 import logoPolandConsulate from '@/images/logos/poland-consulate.svg'
 import logoVfs from '@/images/logos/vfs.svg'
-import image1 from '@/images/photos/photography/land_02.webp'
-import image2 from '@/images/photos/photography/land_12.webp'
-import image3 from '@/images/photos/photography/land_27.webp'
-import image4 from '@/images/photos/photography/land_11.webp'
-import image5 from '@/images/photos/photography/land_05.webp'
+import image1 from '@/images/photos/hero/hero_1.webp'
+import image2 from '@/images/photos/hero/hero_2.webp'
+import image3 from '@/images/photos/hero/hero_3.webp'
+import image4 from '@/images/photos/hero/hero_4.webp'
+import image5 from '@/images/photos/hero/hero_5.webp'
 import portraitImage from '@/images/portrait.webp'
 
 interface Role {
@@ -132,40 +131,41 @@ function About() {
     <div className="grid grid-cols-1">
       <div className="lg:order-first lg:row-span-2">
         <h2 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-          <TextGenerateEffect words="Crafting Code, Capturing Moments, and Fueling Curiosity." />
+          <TextGenerateEffect words="Crafting code, capturing moments, and fueling curiosity." />
         </h2>
         <div className="text mt-14 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
           <p>
-            Hey there! I am a dynamic professional who thrives at the
-            intersection of creativity and technology. My journey is guided by a
-            set of values and skills that define not only my career but also my
-            approach to life.
+            Hey there! I’m a dynamic professional thriving at the intersection
+            of creativity and technology. My journey is driven by values and
+            skills that shape not only my career but also my approach to life.
           </p>
           <p>
-            I have loved making things for as long as I can remember, especially
-            fixing them. I thrive in the world of tech crafting seamless and
-            efficient user experiences. I pay meticulous attention to detail,
-            ensuring that every pixel and interaction is finely tuned. I am
-            always at the forefront of the latest trends and best practices in
-            the field. I am fluent in variety of technologies and languages,
-            ensuring a holistic approach to software development. Before diving
-            headfirst into coding, I climbed the managerial and analyst ladder
-            in foreign affairs and government sector. This experience made me a
-            well-rounded professional and equipped me with valuable leadership,
-            teamwork and many more soft skills, which I now bring to my
-            programming career pushing the boundaries and delivering outstanding
-            results.
+            I’ve always been passionate about making and fixing things. In the
+            world of tech, I focus on crafting seamless, efficient user
+            experiences, paying meticulous attention to every detail—ensuring
+            that each pixel and interaction is finely tuned. I’m constantly on
+            the pulse of the latest trends and best practices, bringing a
+            well-rounded approach to software development through fluency in a
+            wide variety of technologies and languages.
           </p>
           <p>
-            Outside of the professional realm, I am a passionate individual with
-            diverse interests. I have a keen eye for photography and
-            cinematography, often capturing the beauty of the world through my
-            lens. My love for DIY projects, handcrafting, 3D-printing, and
-            automation keeps my creative juices flowing. I am also a devoted
-            enthusiast of cars, bikes, engines, and electronics – constantly
-            exploring the mechanics that drives our world. My fascination with
-            linguistics and sci-fi fuels my curiosity about the mysteries of
-            language and the limitless possibilities of the present and future.
+            Before diving into the tech world, I climbed the ladder in foreign
+            affairs and government, holding managerial and analyst roles. These
+            experiences equipped me with leadership, teamwork, and invaluable
+            soft skills that now shape my approach to coding. Titles may not
+            always capture the depth of what we do, but the value we bring comes
+            from our diverse skills and experiences, and I aim to push the
+            boundaries of what’s possible every day.
+          </p>
+          <p>
+            Outside of work, I channel my creative energy into photography and
+            cinematography, capturing the beauty of the world. My love for DIY
+            projects, 3D-printing, handcrafting, and automation keeps me
+            constantly innovating. I’m also a passionate enthusiast of cars,
+            bikes, engines, and electronics, always exploring the mechanics that
+            drive our world. My curiosity extends to linguistics and sci-fi, as
+            I dive into the mysteries of language and the limitless
+            possibilities of the future.
           </p>
         </div>
       </div>
@@ -291,12 +291,12 @@ export default function Home() {
       <Container className="mt-9">
         <div className="max-w-3xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            <TextGenerateEffect words="Swiss Army Knife Dev," />
-            <TextGenerateEffect words="Tech Wizard, Problem-Solver." />
+            <TextGenerateEffect words="Swiss Army Knife." />
+            <TextGenerateEffect words="Wizard. Generalist. Explorer." />
           </h1>
           <div className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             <div className="max-w-[300px] sm:max-w-none">
-              <TextGenerateEffect words="I’m Denis Butsky, a front end developer and a problem-solver."/>
+              <TextGenerateEffect words="I’m Denis Butsky, a problem-solver and a jack of all trades." />
             </div>
             <TextGenerateEffect words="I live in the present to design the future." />
           </div>

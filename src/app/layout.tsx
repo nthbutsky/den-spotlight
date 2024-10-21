@@ -13,10 +13,10 @@ import Analytics from '@/components/Analytics'
 export const metadata: Metadata = {
   title: {
     template: '%s - Denis Butsky',
-    default: 'Denis Butsky - Swiss Army Knife Dev, Tech Wizard, Problem-Solver.',
+    default: 'Denis Butsky - Swiss Army Knife. Wizard. Generalist. Explorer.',
   },
   description:
-    'I’m Denis Butsky, a front end developer and a problem-solver. I live in Vancouver BC, where I design the future.',
+    'I’m Denis Butsky, a problem-solver and a jack of all trades. I live in the present to design the future.',
 }
 
 export default function RootLayout({

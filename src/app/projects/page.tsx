@@ -22,7 +22,7 @@ const projects = [
     description:
       'Main website for Microbiology & Immunology Department of University of British Columbia.',
     stack: 'Drupal, SCSS, JavaScript, PHP, MySQL, Docker',
-    link: { href: 'https://mbim.ubc.ca/', label: 'mbim.ubc.ca' },
+    link: { href: 'https://mbim.ubc.ca', label: 'mbim.ubc.ca' },
     logo: logoUbc,
   },
   {
@@ -42,8 +42,8 @@ const projects = [
     stack:
       'Vue, Vite, Laravel, Statamic, Tailwind, TypeScript, Docker, Hubspot',
     link: {
-      href: 'https://landing.connect-one.devcon.team/',
-      label: 'connect-one',
+      href: 'https://aio.digital',
+      label: 'aio.digital',
     },
     logo: logoAio,
   },
@@ -53,7 +53,7 @@ const projects = [
       'Web solutions for one of the largest and oldest manufacturer of windows and accessories in the World.',
     stack:
       'Vue, TypeScript, Vite, SCSS, GraphQL, Laravel, Docker, Kubernetes, PHP, Plesk, Auth0, .NET',
-    link: { href: 'https://www.velux.de/', label: 'velux.de' },
+    link: { href: 'https://www.velux.de', label: 'velux.de' },
     logo: logoVelux,
   },
   {
@@ -62,7 +62,7 @@ const projects = [
     stack:
       'Laravel, Alpine, Tailwind, Docker, Kubernetes, PHP, Stripe, Livewire, Statamic, Hubspot',
     link: {
-      href: 'https://speekly.de/',
+      href: 'https://speekly.de',
       label: 'speekly.de',
     },
     logo: logoSpeekly,
@@ -73,7 +73,7 @@ const projects = [
       'A portal for the expert in mineral disposal, including recycling, utilization or disposal of mineral waste.',
     stack: 'Vue, Nuxt, TypeScript, Webpack, SCSS, Tailwind, PHP, Docker',
     link: {
-      href: 'https://www.remex.de/',
+      href: 'https://www.remex.de',
       label: 'remex.de',
     },
     logo: logoRemex,
@@ -83,7 +83,7 @@ const projects = [
     description: 'B2B platform for shortening sales cycle.',
     stack: 'Vue, Laravel, SCSS, TypeScript, Vite, PHP, Docker',
     link: {
-      href: 'https://www.virtrex.de/',
+      href: 'https://www.virtrex.de',
       label: 'virtrex.de',
     },
     logo: logoVirtrex,
@@ -93,7 +93,7 @@ const projects = [
     description: 'A movie search app.',
     stack: 'React, TypeScript, Tailwind',
     link: {
-      href: 'https://movie-date-six.vercel.app/',
+      href: 'https://movie-date-six.vercel.app',
       label: 'movie-date',
     },
   },

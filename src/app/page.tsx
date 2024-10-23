@@ -142,7 +142,7 @@ function About() {
           <p>
             I’ve always been passionate about making and fixing things. In the
             world of tech, I focus on crafting seamless, efficient user
-            experiences, paying meticulous attention to every detail—ensuring
+            experiences, paying meticulous attention to every detail — ensuring
             that each pixel and interaction is finely tuned. I’m constantly on
             the pulse of the latest trends and best practices, bringing a
             well-rounded approach to software development through fluency in a

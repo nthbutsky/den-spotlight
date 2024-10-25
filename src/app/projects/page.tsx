@@ -93,7 +93,7 @@ const projects = [
     description: 'A movie search app.',
     stack: 'React, TypeScript, Tailwind',
     link: {
-      href: 'https://movie-date-six.vercel.app',
+      href: 'https://movie-date.denisbutsky.com',
       label: 'movie-date',
     },
   },

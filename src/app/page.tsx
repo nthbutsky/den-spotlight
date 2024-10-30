@@ -32,6 +32,7 @@ import image3 from '@/images/photos/hero/hero_3.webp'
 import image4 from '@/images/photos/hero/hero_4.webp'
 import image5 from '@/images/photos/hero/hero_5.webp'
 import portraitImage from '@/images/portrait.webp'
+import avatarImage from '@/images/avatar.webp'
 
 interface Role {
   company: string
@@ -113,6 +114,12 @@ function Photos() {
               rotations[imageIndex % rotations.length],
             )}
           >
+            <Image
+              src={avatarImage}
+              alt=""
+              sizes="(min-width: 640px) 18rem, 11rem"
+              className="absolute inset-0 h-full w-full object-cover"
+            />
             <Image
               src={image}
               alt=""

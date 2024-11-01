@@ -26,17 +26,6 @@ const projects = [
     logo: logoUbc,
   },
   {
-    name: 'FraAlliance',
-    description:
-      'Lufthansa Airlines and Frankfurt Airport flights information.',
-    stack: 'Vue, Tailwind, TypeScript, Vite, Docker',
-    link: {
-      href: 'https://passengerservices.fraalliance.de/gate/a16/',
-      label: 'fraalliance.de',
-    },
-    logo: logoFraalliance,
-  },
-  {
     name: 'AIO',
     description: 'Landing page for marketing team to promote AIO Platform.',
     stack:
@@ -77,6 +66,17 @@ const projects = [
       label: 'remex.de',
     },
     logo: logoRemex,
+  },
+  {
+    name: 'FraAlliance',
+    description:
+      'Lufthansa Airlines and Frankfurt Airport flights information.',
+    stack: 'Vue, Tailwind, TypeScript, Vite, Docker',
+    link: {
+      href: 'https://passengerservices.fraalliance.de/gate/a16/',
+      label: 'fraalliance.de',
+    },
+    logo: logoFraalliance,
   },
   {
     name: 'Virtrex',

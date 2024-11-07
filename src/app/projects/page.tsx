@@ -70,7 +70,7 @@ const projects = [
   {
     name: 'FraAlliance',
     description:
-      'Lufthansa Airlines and Frankfurt Airport flights information.',
+      'Lufthansa Airlines | Frankfurt Airport flights information (mobile only).',
     stack: 'Vue, Tailwind, TypeScript, Vite, Docker',
     link: {
       href: 'https://passengerservices.fraalliance.de/gate/a16/',

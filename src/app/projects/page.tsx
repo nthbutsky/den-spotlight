@@ -20,14 +20,14 @@ const projects = [
   {
     name: 'MBIM',
     description:
-      'Main website for Microbiology & Immunology Department of University of British Columbia.',
+      'Main website for Microbiology & Immunology Department of the University of British Columbia.',
     stack: 'Drupal, SCSS, JavaScript, PHP, MySQL, Docker',
     link: { href: 'https://mbim.ubc.ca', label: 'mbim.ubc.ca' },
     logo: logoUbc,
   },
   {
     name: 'AIO',
-    description: 'Landing page for marketing team to promote AIO Platform.',
+    description: 'Landing page for marketing team to promote AIO Platform - a cutting-edge solution that connects physical objects to intelligent services and data analytics.',
     stack:
       'Vue, Vite, Laravel, Statamic, Tailwind, TypeScript, Docker, Hubspot',
     link: {
@@ -37,24 +37,24 @@ const projects = [
     logo: logoAio,
   },
   {
+    name: 'FraAlliance',
+    description:
+      'Lufthansa Airlines | Frankfurt Airport flights information (Prototype and mobile only).',
+    stack: 'Vue, Tailwind, TypeScript, Vite, Docker',
+    link: {
+      href: 'https://passengerservices.fraalliance.de/gate/a16/',
+      label: 'fraalliance.de',
+    },
+    logo: logoFraalliance,
+  },
+  {
     name: 'Velux',
     description:
       'Web solutions for one of the largest and oldest manufacturer of windows and accessories in the World.',
     stack:
-      'Vue, TypeScript, Vite, SCSS, GraphQL, Laravel, Docker, Kubernetes, PHP, Plesk, Auth0, .NET',
+      'Vue, TypeScript, Vite, SCSS, GraphQL, Laravel, Docker, Kubernetes, PHP, Plesk, Auth0, .NET, Hubspot',
     link: { href: 'https://www.velux.de', label: 'velux.de' },
     logo: logoVelux,
-  },
-  {
-    name: 'Speekly',
-    description: 'Platform for user generated content videos.',
-    stack:
-      'Laravel, Alpine, Tailwind, Docker, Kubernetes, PHP, Stripe, Livewire, Statamic, Hubspot',
-    link: {
-      href: 'https://speekly.de',
-      label: 'speekly.de',
-    },
-    logo: logoSpeekly,
   },
   {
     name: 'Remex',
@@ -68,15 +68,15 @@ const projects = [
     logo: logoRemex,
   },
   {
-    name: 'FraAlliance',
-    description:
-      'Lufthansa Airlines | Frankfurt Airport flights information (mobile only).',
-    stack: 'Vue, Tailwind, TypeScript, Vite, Docker',
+    name: 'Speekly',
+    description: 'Platform for user generated content videos.',
+    stack:
+      'Laravel, Alpine, Tailwind, Docker, Kubernetes, PHP, Stripe, Livewire, Statamic, Hubspot',
     link: {
-      href: 'https://passengerservices.fraalliance.de/gate/a16/',
-      label: 'fraalliance.de',
+      href: 'https://speekly.de',
+      label: 'speekly.de',
     },
-    logo: logoFraalliance,
+    logo: logoSpeekly,
   },
   {
     name: 'Virtrex',
